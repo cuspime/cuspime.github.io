@@ -3,7 +3,7 @@ title: " Higgs Vacuum Decay in a Braneworld"
 collection: publications
 permalink: /publication/Higgs_VDBrane
 excerpt: 'This paper is about Vacuum decays for a Higgs particle in a Braneworld'
-date: 2015-10-01
+date: 2019-01-30
 venue: 'Journal 1'
 paperurl: 'http://academicpages.github.io/files/paper3.pdf'
 citation: 'L. Cuspinera, R. Gregory, K. M. Marshall and I. G. Moss, Higgs VacuumDecay in a Braneworld, _IJMPD (2019)_ 2050005.'
