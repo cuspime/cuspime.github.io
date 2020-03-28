@@ -2,7 +2,7 @@
 title: "Higgs Vacuum Decay from Particle collisions"
 collection: publications
 permalink: /publication/Higgs_VD
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Higgs Vacum decay in higher dimensions'
 date: 2009-10-01
 venue: 'Journal 1'
 paperurl: 'https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.024046'
