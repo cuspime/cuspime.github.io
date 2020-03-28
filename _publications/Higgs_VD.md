@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/Higgs_VD
 excerpt: 'Higgs Vacum decay in higher dimensions'
 date: 2009-10-01
-venue: 'Journal 1'
+venue: 'Phys. Rev. D'
 paperurl: 'https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.024046'
 citation: 'Leopoldo Cuspinera, Ruth Gregory, Katie M. Marshall, and Ian G. Moss; Higgs Vacuum Decay from Particle collisions?; <i>Phys. Rev. D</i>. 99(2). 30/01/2019'
 ---
@@ -14,4 +14,4 @@ We examine the effect of large extra dimensions on black hole seeded vacuum deca
 
 Recommended citation: 
 **L. Cuspinera, R. Gregory, K. Marshall and I. G. Moss, Higgs Vacuum Decay
-from Particle Collisions?, _Phys. Rev. D99_ (2019) 024046**,
+from Particle Collisions?, _Phys. Rev. D 99_ (2019) 024046**,
