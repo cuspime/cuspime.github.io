@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Leo's website"
+title                    : "Leopoldo Cuspinera"
 title_separator          : "_"
 name                     : &name "PhD. Juan Leopoldo Cuspinera Contreras"
 description              : &description "Data Scientist with a PhD. in Theoretical Physics interested in learning, travelling and photography"
@@ -57,9 +57,9 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : leopoldo_cus
 facebook:
-  username               :
+  username               : leopoldo.cuspinera
   app_id                 :
   publisher              :
 og_image                 :  # Open Graph/Twitter default site image
@@ -94,22 +94,22 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "https://www.facebook.com/leopoldo.cuspinera"
+  facebook         : "leopoldo.cuspinera"
   foursquare       :
   github           : "cuspime"
   google_plus      :
   keybase          :
-  instagram        : "https://www.instagram.com/cuspime/"
+  instagram        : "cuspime"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/leocuspinera/"
+  linkedin         : "leocuspinera"
   orcid            : "https://orcid.org/0000-0002-2359-8880"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "https://twitter.com/leopoldo_cus"
+  twitter          : "leopoldo_cus"
   vine             :
   weibo            :
   xing             :
