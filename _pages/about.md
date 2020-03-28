@@ -22,7 +22,9 @@ To take a look at some projects I have been developing lately as well as some st
 This is a **personal** website and as such, I'll use it to share some of the things I find interesting (or useful) and some things I've done in the past. 
 Please feel free to drop me a line for any queries.
 
-One of the nicest Youtube channels I have ever came accross is **3Brown1Blue**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras:
+* One of the nicest books online to learn a myriad of things about data science can be found online for free!! Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
+
+* One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras:
 <iframe  width="625" height="344" src="https://www.youtube.com/embed/aircAruvnKk" frameborder="0" allowfullscreen></iframe>
 
 
