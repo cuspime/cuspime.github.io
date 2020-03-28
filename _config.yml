@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Leo"
+title                    : "Leo's website"
 title_separator          : "_"
-name                     : &name "Juan Leopoldo Cuspinera Contreras"
-description              : &description "Data Scientist with a PhD. in Theoretical Physics"
+name                     : &name "Dr. Juan Leopoldo Cuspinera Contreras"
+description              : &description "Data Scientist with a PhD. in Theoretical Physics interested in learning, travelling and photography"
 url                      : https://cuspime.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "cuspime.github.io"
@@ -80,36 +80,36 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  name             : "Dr. Cuspinera Contreras"
+  avatar           : "FotoCV.jpg"
+  bio              : "Data Scientist with a PhD. in Theoretical Physics interested in learning, travelling and photography"
+  location         : "Puebla, Mexico"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
+  googlescholar    : "https://scholar.google.com/citations?user=Ru2FJ_cAAAAJ&hl=en&oi=sra"
+  email            : "leocuspinera@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "https://www.facebook.com/leopoldo.cuspinera"
   foursquare       :
-  github           : "academicpages"
+  github           : "cuspime"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "https://www.instagram.com/cuspime/"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "https://www.linkedin.com/in/leocuspinera/"
+  orcid            : "https://orcid.org/0000-0002-2359-8880"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "https://twitter.com/leopoldo_cus"
   vine             :
   weibo            :
   xing             :
