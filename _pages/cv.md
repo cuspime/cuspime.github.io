@@ -11,43 +11,59 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D in Physics, Durham University, 2020
+* M.Sc. in Particles, Strings and Cosmology, Durham University, 2015
+* B.Sc. in Theoretical Physics, BUAP, 2014
+
+
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+  * **Perimeter Institute** Jan. 2016 - Mar. 2019: Visiting Researcher
+    *  Made extensive use of both Python and Mathematica to solve the Partial Differential Equations that describe vacuum decays around higher dimensional black holes. 
+    * Worked in an international collaboration that had as a result two of the papers I published during my PhD.
+    * Gave a seminar explaining the calculations we made to obtain the results of our work.
+    * Supervisor: Ruth Gregory
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
+* **Durham University** Oct. 2015 - Nov. 2019: Teacher Assistant
+  * **Maths and stats lab**: guided students with different academic backgrounds to find their own answers to mathematical and statistical problems. Due to the positive impact our team had on the students, we obtained the ’Student
+employee of the year (2019)’ award.
+  * **Tutor** : helped students in understanding concepts in Linear Algebra, Statistics, Advanced Calculus, Mathematics, etc.  The positive feedback I received made me realise the impact of caring for transmitting an idea in a clear way.
+
+* **Deutsches Elektronen-Synchrotron** Summer 2014: Internship
+  * Made extensive use of **C++** to study the predictions of different Monte Carlo simulators on diffractive dissociations of proton-proton collisions and made a comparison with real data measured at LHC.
+
+
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Programming**
+  * Python, Sci-kit, Pandas, Bokeh, Seaborn
+  * SQL 
+  * Mathematica
+  * Excel 
+  * Bash 
+  * LaTeX 
+  * C++
+* **Professional**
+  *  Mathematical modelling
+  * Linear Algebra
+  * Pattern identification
+  * Problem solving
+  * Quantitative analysis
+  * Public speaking
+  * Self-training
+* **Languages**
+  * English: fluent 
+  * Spanish: native
+  * Italian: fluent
 
 Publications
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
+    
 Teaching
 ======
   <ul>{% for post in site.teaching %}
@@ -56,4 +72,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Volunteer at Ciencia Joven, where I used to teach science to kids of all ages.
