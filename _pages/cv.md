@@ -19,18 +19,18 @@ Education
 
 Work experience
 ======
-  * **Perimeter Institute** Jan. 2016 - Mar. 2019: Visiting Researcher
+  * **Perimeter Institute** Jan. 2016 - Mar. 2019: **Visiting Researcher**
     *  Made extensive use of both Python and Mathematica to solve the Partial Differential Equations that describe vacuum decays around higher dimensional black holes. 
     * Worked in an international collaboration that had as a result two of the papers I published during my PhD.
     * Gave a seminar explaining the calculations we made to obtain the results of our work.
     * Supervisor: Ruth Gregory
 
-* **Durham University** Oct. 2015 - Nov. 2019: Teacher Assistant
+* **Durham University** Oct. 2015 - Nov. 2019: **Teacher Assistant**
   * **Maths and stats lab**: guided students with different academic backgrounds to find their own answers to mathematical and statistical problems. Due to the positive impact our team had on the students, we obtained the ’Student
 employee of the year (2019)’ award.
   * **Tutor** : helped students in understanding concepts in Linear Algebra, Statistics, Advanced Calculus, Mathematics, etc.  The positive feedback I received made me realise the impact of caring for transmitting an idea in a clear way.
 
-* **Deutsches Elektronen-Synchrotron** Summer 2014: Internship
+* **Deutsches Elektronen-Synchrotron** Summer 2014: **Internship**
   * Made extensive use of **C++** to study the predictions of different Monte Carlo simulators on diffractive dissociations of proton-proton collisions and made a comparison with real data measured at LHC.
 
 
