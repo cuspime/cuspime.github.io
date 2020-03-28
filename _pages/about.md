@@ -13,12 +13,13 @@ redirect_from:
 </h1>
 ***
 
-I'm Leopoldo Cuspinera and for most of my adult life I have studied physics and taken _amateur_ photographies, specially when travelling. 
+I'm **Leopoldo Cuspinera** and for most of my adult life I have studied physics and taken _amateur_ photographies, specially when travelling. 
 However, physics, data, photography and travelling are not my only hobbies; I also enjoy playing the guitar, learning something new, cooking on Sundays and spending time with my family.
 
 I recently finished my PhD studies in England and, since I think the lifestyle of a young researcher does not really fit me, I am now looking to do research but now in industry. Furthermore, since I am very **curious** by nature and I'd like to learn about many different topics in a highly dynamic environment, I think that the best role for me would be as a **Data Scientist**. 
+To take a look at some projects I have been developing lately as well as some stuff I did on my PhD, take a look [here](https://github.com/cuspime/Projects)
 
-This is a personal website and as such, I'll use it to share some of the things I find interesting (or useful) and some things I've done in the past. 
+This is a **personal** website and as such, I'll use it to share some of the things I find interesting (or useful) and some things I've done in the past. 
 Please feel free to drop me a line for any queries.
 
 
