@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Leopoldo Cuspinera"
+title                    : "Main"
 title_separator          : "_"
 name                     : &name "PhD. Juan Leopoldo Cuspinera Contreras"
 description              : &description "Data Scientist with a PhD. in Theoretical Physics interested in learning, travelling and photography"
