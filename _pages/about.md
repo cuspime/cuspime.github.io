@@ -25,11 +25,12 @@ Please feel free to drop me a line for any queries.
 * There is a really useful online book to learn a myriad of things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
 
 * One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras:
-<iframe  width="625" height="344" src="https://www.youtube.com/embed/aircAruvnKk" frameborder="0" allowfullscreen></iframe>
+<iframe  width="400" height="250" src="https://www.youtube.com/embed/aircAruvnKk" frameborder="0" allowfullscreen></iframe>
 
 * When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
-<iframe  width="625" height="344" src="https://www.youtube.com/channel/UCv_vLHiWVBh_FR9vbeuiY-A" frameborder="0" allowfullscreen></iframe>
+<iframe  width="400" height="250" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
 
-https://youtu.be/s9qlNBBoFG4
+
+So there you go, these are some of my favorite resources. If you think there are some worth checking out, please do let me know!
 
 
