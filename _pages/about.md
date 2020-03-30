@@ -33,6 +33,8 @@ Please feel free to drop me a line for any queries.
 
 * For the curious minds that want to know [how stuff works](https://www.howstuffworks.com/)
 
+* To learn how to do [social networks mining](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
+
 * When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
 <iframe  width="300" height="200" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
 
