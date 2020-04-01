@@ -19,8 +19,10 @@ However, physics, data, photography and travelling are not my only hobbies; I al
 I recently finished my PhD studies in **Durham University** (England) and, since I think the lifestyle of a young researcher does not really fit me, I am now looking to do research but now in industry. Furthermore, since I am very **curious** by nature and I'd like to learn about many different topics in a highly dynamic environment, I think that the best role for me would be as a **Data Scientist**. 
 To take a look at some projects I have been developing lately, as well as some stuff I usedd during my PhD, take a look [here](https://github.com/cuspime/Projects)
 
-This is a **personal** website and as such, I'll use it to share some of the things I find interesting (or useful) and some things I've done in the past. 
+In this **personal website** I'll share some of the things I find interesting (or useful) and some things I've done in the past. 
 Please feel free to drop me a line for any queries.
+
+* To take alook at some projects that I have been working on, [look here](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
 
 * There is a really useful online book to learn a myriad of things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
 
