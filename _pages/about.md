@@ -22,7 +22,7 @@ To take a look at some projects I have been developing lately, as well as some s
 In this **personal website** I'll share some of the things I find interesting (or useful) and some things I've done in the past. 
 Please feel free to drop me a line for any queries.
 
-* To take alook at some projects that I have been working on, [look here](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
+* To take a look at some projects that I have been working on, [click here](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
 
 * There is a really useful online book to learn a myriad of things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
 
