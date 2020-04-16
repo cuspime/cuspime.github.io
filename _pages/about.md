@@ -30,7 +30,7 @@ Please feel free to drop me a line for any queries.
 * One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras:
 <iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="300" height="200"  frameborder="0" ></iframe>
 
-* For a more technical (and useful) introduction to NN, use the [Google developers](https://codelabs.developers.google.com/?cat=TensorFlow) site.
+* For a more technical (and useful) introduction to NN, use the [Google developers](https://codelabs.developers.google.com) site.
 
 * Some really interesting jupyter notebooks to learn from can be found in [this list](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#machine-learning-statistics-and-probability)
 
