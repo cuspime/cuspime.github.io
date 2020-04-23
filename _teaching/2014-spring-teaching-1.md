@@ -1,20 +1,20 @@
 ---
-title: "Teaching experience 1"
+title: "Teacher Assistant"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
+permalink: /teaching/2015_2019_position_at_DU
+venue: "Durham University, Physics and Maths Departments"
 date: 2014-01-01
-location: "City, Country"
+location: "Durham, England"
 ---
 
 This is a description of a teaching experience. You can use markdown like any other post.
 
-Heading 1
+Maths and stats lab
 ======
+Guided students with different academic backgrounds to find **their own** answers to mathematical and statistical problems. 
+Due to the positive impact our team had on the students, we obtained the 'Student employee of the year (2019)' award.
 
-Heading 2
+Tutor
 ======
-
-Heading 3
-======
+Helped students in understanding concepts in Quantum Mechanics, Linear Algebra, Statistics and Calculus
