@@ -1,7 +1,7 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Black hole embedding"
+excerpt: "Short description of portfolio item number 1<br/><img src='https://s3.cern.ch/inspire-prod-files-1/190fc6e0fb63d66317f618fc077ab0f6'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+This image helps in understanding super-entropic black holes and allows a more approachable discussion when talking about the **critical black holes** we studied in [our paper](https://inspirehep.net/literature/1767690)
