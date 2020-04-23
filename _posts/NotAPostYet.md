@@ -4,7 +4,6 @@ date: 2020 hopefully
 permalink: /posts/2020/08/Hope/
 tags:
   - cool posts
-  - we'll see
   - Data Science
 ---
 
