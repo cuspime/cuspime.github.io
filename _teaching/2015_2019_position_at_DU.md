@@ -8,7 +8,7 @@ date: 2014-01-01
 location: "Durham, England"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Reinforced lessons by tutoring individual students and small groups. I tracked progress, oversaw lesson preparations and helped answering questions during theoretical lab classes.
 
 Maths and stats lab
 ======
