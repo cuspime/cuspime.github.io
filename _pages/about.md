@@ -26,7 +26,8 @@ Please feel free to drop me a line for any queries.
 
 * Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
 
-* COVID bokeh plot <iframe src="covid.html"
+* COVID bokeh plot 
+<iframe src="covid.html"
     sandbox="allow-same-origin allow-scripts"
     width="100%"
     height="500"
