@@ -26,10 +26,10 @@ Please feel free to drop me a line for any queries.
 
 * Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
 
-* COVID bokeh plot 
-<iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="100%"  height="500"  scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
+* These are some **COVID** plots that I find both interesting and informative:
+<iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="300"  height="200"  scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
-
+(If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
 
 * There is a really useful online book to learn a myriad of things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
 
