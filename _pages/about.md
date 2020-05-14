@@ -24,7 +24,8 @@ In this **personal website** I'll share some of the things I find interesting (o
 
 * Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
 
-* These are some **COVID** plots that I find both interesting and informative:
+* These are some **COVID** plots that I find both interesting and informative. Try moving the cursor on top of the data and switch on/off data by clicking on the legends of these tabs.
+
 <iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="120%"  height="600"  scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
