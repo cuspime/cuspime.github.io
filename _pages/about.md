@@ -9,20 +9,18 @@ redirect_from:
 ---
 
 <h1 style="color:#28B463; font-family:candara; font-size:300%; text-align:center;"> 
-    Hi there,
+    Hi,
 </h1>
 ***
 
-I'm **Leopoldo Cuspinera** and for quite a while I have studied theoretical physics and taken _amateur_ photographies, specially when travelling. 
-Recently I started learning about the details of ML and NN and how to apply them to make a tangible, positive impact on industry. 
-However, physics, data, photography and travelling are not my only hobbies; I also enjoy playing the guitar, learning something new, cooking on Sundays and spending time with my family.
+My name is **Leopoldo Cuspinera** and I am a theoretical physicist. This means that for quite a while I have dedicated myself to understand some of the mechanisms by which the universe behaves the way it does. As a matter of fact, at the beginning of this year I finished my **PhD** studies in **Durham University** (England that is). 
+The importance of having a mid-term tangible, positive impact on society and the fact that the post-doc lifestyle doesn't really fit me have made me realize that I want to apply the technical and soft skills I've learned so far and that a good path to do so is becoming a **Data Scientist**. Since I am very **curious** by nature and I like to learn about many different areas in highly dynamic environments, I think this carrer path is a perfect fit for me. 
+Shortly after my PhD corrections, I started learning about the minutes and details of **ML** and **NN** and how to apply them to real-life problems.
 
-At the beginning of this year I finished my PhD studies in **Durham University** (England) and, since I think the post-doc lifestyle  doesn't really fit me, I am now looking to do research but now in industry. 
-It might just be that I am very **curious** by nature and hence I like to learn about many different areas in highly dynamic environments. 
-Therefore, I consider a job as a **Data Science** would fulfil and stimulate me the most in the coming years.
+However, physics and data analysis are not my only *passions*. I also enjoy taking _amateur_ photographies (specially when travelling),   playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
 
-In this **personal website** I'll share some of the things I find interesting (or useful) and some things I've done in the past. 
-Please feel free to drop me a line for any queries.
+In this **personal website** I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with on the way. 
+**Please feel free to drop me a line for any queries.**
 
 * Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
 
