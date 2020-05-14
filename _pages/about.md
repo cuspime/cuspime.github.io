@@ -27,7 +27,7 @@ Please feel free to drop me a line for any queries.
 * Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
 
 * These are some **COVID** plots that I find both interesting and informative:
-<iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="1250%"  height="500"  scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="125%"  height="110%"  scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
 
