@@ -36,7 +36,7 @@ In this **personal website** I'll share some of the things I find interesting (o
 * To learn how to do [social networks mining](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
 
 * One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras:
-<iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="200" height="150"  frameborder="0" ></iframe>
+<iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" ></iframe>
 
 * For a technical and useful introduction to NN, use the [Google developers](https://codelabs.developers.google.com) site.
 
@@ -47,7 +47,7 @@ In this **personal website** I'll share some of the things I find interesting (o
 * For the curious minds that want to know [how stuff works](https://www.howstuffworks.com/)
 
 * When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
-<iframe  width="200" height="150" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
+<iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
 
 
 
