@@ -1,5 +1,5 @@
 ---
-title: "Teacher Assistant"
+title: "Teaching Assistant"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2015_2019_position_at_DU
