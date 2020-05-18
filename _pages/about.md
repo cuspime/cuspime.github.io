@@ -9,18 +9,18 @@ redirect_from:
 ---
 
 <h1 style="color:#28B463; font-family:candara; font-size:200%; text-align:center;"> 
-    Well, hello there,
+    Hello there,
 </h1>
 ***
 
-My name is **Leopoldo Cuspinera** and I am a theoretical physicist. This means that for quite a while I have dedicated myself to understand some of the mechanisms by which the universe behaves the way it does. As a matter of fact, at the beginning of this year I finished my **PhD** studies in **Durham University** (England that is). 
+My name is **Leopoldo Cuspinera** and I am a theoretical physicist. This means that for quite a while I have dedicated myself to understand some of the mechanisms by which the universe behaves the way it does. As a matter of fact, at the beginning of this year I finished my *PhD* studies in *Durham University* (England that is). 
 
-The importance of having a mid-term tangible, positive impact on society and the fact that the post-doc lifestyle doesn't really fit me have made me realise that I want to apply the technical and soft skills I've learned so far and that a good path to do so is becoming a **Data Scientist**. Since I am very **curious** by nature and I like to learn about many different areas in highly dynamic environments, I think this carrer path is a perfect fit for me. 
-Shortly after my PhD corrections, I started learning about the minutes and details of **ML** and **NN** and how to apply them to real-life problems.
+The importance of having a mid-term tangible, positive impact on society and the fact that the post-doc lifestyle doesn't really fit me have made me realise that I want to apply the technical and soft skills I've learned so far and that a good path to do so is becoming a *Data Scientist*. Since I am very *curious* by nature and I like to learn about many different areas in highly dynamic environments, I think this carrer path is a perfect fit for me. 
+Shortly after my PhD corrections, I started learning about the minutes and details of *ML* and *NN* and how to apply them to real-life problems.
 
 However, physics and data analysis are not my only *passions*. I also enjoy taking _amateur_ photographies (specially when travelling),   playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
 
-In this **personal website** I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with on the way. 
+In this *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with on the way. 
 **Please feel free to drop me a line for any queries.**
 
 * Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
@@ -35,8 +35,7 @@ In this **personal website** I'll share some of the things I find interesting (o
 
 * To learn how to do [social networks mining](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
 
-* One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras:
-<iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" ></iframe>
+* One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras: <iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" ></iframe>
 
 * For a technical and useful introduction to NN, use the [Google developers](https://codelabs.developers.google.com) site.
 
@@ -46,8 +45,7 @@ In this **personal website** I'll share some of the things I find interesting (o
 
 * For the curious minds that want to know [how stuff works](https://www.howstuffworks.com/)
 
-* When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
-<iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
+* When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is <iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
 
 
 
