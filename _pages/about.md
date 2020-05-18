@@ -35,17 +35,21 @@ In this *personal website* I'll share some of the things I find interesting (or 
 
 * To learn how to do [social networks mining](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
 
-* One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras: <iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" ></iframe>
+* One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras: 
+<iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" ></iframe>
 
 * For a technical and useful introduction to NN, use the [Google developers](https://codelabs.developers.google.com) site.
 
 * Some really interesting jupyter notebooks to learn from can be found in [this list](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#machine-learning-statistics-and-probability)
 
-* If you're a physicist or a mathematician and haven heard of the [Mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), you're missing out! It's a lot of fun.
+* If you use the archive, take a look at [this great tool](https://myspires.ajainphysics.com/) to manage your LaTeX bibliography (courtesy of my friend Akash Jain).
+
+* Also, if you're a physicist or a mathematician and haven heard of the [Mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), you're missing out! It's a lot of fun.
 
 * For the curious minds that want to know [how stuff works](https://www.howstuffworks.com/)
 
-* When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is <iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
+* When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
+<iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
 
 
 
