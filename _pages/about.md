@@ -27,7 +27,7 @@ In this *personal website* I'll share some of the things I find interesting (or 
 
 * These are some _COVID19_ **interactive plots** that I find both interesting and informative. *You can zoom in and out. Try also moving the cursor on top of the data and switch on/off data by __clicking__ on the legends of these tabs*.
 
-<iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="120%"  height="750"  scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="120%"  height="620"  scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
 
