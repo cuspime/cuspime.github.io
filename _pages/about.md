@@ -23,7 +23,7 @@ However, physics and data analysis are not my only *passions*. I also enjoy taki
 In this *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with on the way. 
 **Please feel free to drop me a line for any queries.**
 
-* Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them.
+* Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them. Also, take a peak at my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/) for interesting data insights.
 
 * These are some _COVID19_ **interactive plots** that I find both interesting and informative. *You can zoom in and out. Try also moving the cursor on top of the data and switch on/off data by __clicking__ on the legends of these tabs*.
 
