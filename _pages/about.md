@@ -33,7 +33,7 @@ In this *personal website* I'll share some of the things I find interesting (or 
 
 * Tableau view for the COVID
 
-<iframe src="https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"> </iframe>
+<iframe width="900"  height="620" src="https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"> </iframe>
 
 * There is a really useful online book to learn a myriad of things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
 
