@@ -32,7 +32,7 @@ In this *personal website* I'll share some of the things I find interesting (or 
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
 
 * Tableau COVID Dashboard
-<iframe src="https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="120%"  height="620" style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="1775 px"  height="1000 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
 
@@ -44,7 +44,7 @@ In this *personal website* I'll share some of the things I find interesting (or 
 * To learn how to do social networks mining [click here.](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
 
 * One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras: 
-<iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" ></iframe>
+<iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);" ></iframe>
 
 * For a technical and useful introduction to NN, use the [Google developers](https://codelabs.developers.google.com) site.
 
@@ -53,7 +53,7 @@ In this *personal website* I'll share some of the things I find interesting (or 
 * Also, if you're a physicist or a mathematician and haven heard of the [Mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), you're missing out! It's a lot of fun.
 
 * When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
-<iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
+<iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);" frameborder="0" allowfullscreen></iframe>
 
 
 
