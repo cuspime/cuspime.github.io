@@ -9,4 +9,8 @@ This image helps in understanding super-entropic black holes and allows a more a
 
 <br/><img src="20170423_141108-01.jpeg">
 <br/><img src="20170817_192048-01.jpeg">
+<br/><img src="20170919_154020-01.jpeg">
+<br/><img src="_DSC4509-01-01.jpeg">
+<br/><img src="_DSC5064-01.jpeg">
+
  
