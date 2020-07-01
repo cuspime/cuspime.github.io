@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Leo's website"
-title_separator          : "_"
+title_separator          : ""
 name                     : &name "PhD. Juan Leopoldo Cuspinera Contreras"
 description              : &description "Data Scientist with a PhD. in Theoretical Physics interested in learning, travelling and photography"
 url                      : https://cuspime.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
