@@ -32,7 +32,7 @@ In this *personal website* I'll share some of the things I find interesting (or 
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
 
 * Tableau COVID Dashboard
-<iframe src="https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="120%"  height="620 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="1000 px"  height="620 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
 
