@@ -16,3 +16,8 @@ This image helps in understanding super-entropic black holes and allows a more a
 <br/><img src="20170817_192048-01.jpeg" width="60%" height="60%">
 <br/><img src="_DSC5347-01.jpeg" width="60%" height="60%">
 <br/><img src="https://www.instagram.com/p/B61h8caqppr/?utm_source=ig_web_button_share_sheet" width="60%" height="60%">
+<br/><img src="https://www.instagram.com/p/B61h8caqppr/?utm_source=ig_web_button_share_sheet" width="60%" height="60%">
+<br/><img src="https://www.instagram.com/p/B61h8caqppr/?utm_source=ig_web_button_share_sheet" width="60%" height="60%">
+<br/><img src="https://www.instagram.com/p/B2qbUO6gIFX/?utm_source=ig_web_copy_link" width="60%" height="60%">
+
+<iframe src="https://www.instagram.com/p/B2qbUO6gIFX/?utm_source=ig_web_button_share_sheet"  width="100" height="70"  frameborder="0" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" ></iframe>
