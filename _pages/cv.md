@@ -38,16 +38,20 @@ employee of the year (2019)’ award.
 Skills
 ======
 * **Programming**
-  * Python, Sci-kit, Pandas, Bokeh, Seaborn
+  * Python: Sci-kit, Pandas, Bokeh, Seaborn
   * SQL 
+  * Tableau
+  * Tensorflow
+  * Keras
   * Mathematica
   * Excel 
   * Bash 
   * LaTeX 
   * C++
 * **Professional**
-  *  Mathematical modelling
+  * Mathematical modelling
   * Linear Algebra
+  * Time Series Analysis (SARIMAX, RNN)
   * Pattern identification
   * Problem solving
   * Quantitative analysis
