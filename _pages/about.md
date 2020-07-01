@@ -8,8 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-<h1 style="color:#28B463; font-family:candara; font-size:200%; text-align:left;"> 
-    Hi,
+<h1 style="color:#28B463; font-family:candara; font-size:200%; text-align:center;"> 
+    Hello there!
 </h1>
 ***
 
