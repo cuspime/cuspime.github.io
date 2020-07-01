@@ -8,22 +8,22 @@ redirect_from:
   - /about.html
 ---
 
-<h1 style="color:#28B463; font-family:candara; font-size:200%; text-align:center;"> 
-    Hello there,
+<h1 style="color:#28B463; font-family:candara; font-size:200%; text-align:left;"> 
+    Hi,
 </h1>
 ***
 
-My name is **Leopoldo Cuspinera** and I am a theoretical physicist. This means that for quite a while I have dedicated myself to understand some of the mechanisms by which the universe behaves the way it does. As a matter of fact, at the beginning of this year I finished my *PhD* studies in *Durham University* (England that is). 
+My name is **Leopoldo Cuspinera** and I am a PhD in Theoretical Physics. For a long time now I have dedicated myself to understand some of the mechanisms by which the universe behaves the way it does. If you are interested in higher dimensional black holes, thermodynamics or the Randall-Sundrum braneworld model, you may find it interesting to take a look at the work I've been part of and that has been [published](https://cuspime.github.io/publications/). 
 
-The importance of having a mid-term tangible, positive impact on society and the fact that the post-doc lifestyle doesn't really fit me have made me realise that I want to apply the technical and soft skills I've learned so far and that a good path to do so is becoming a *Data Scientist*. Since I am very *curious* by nature and I like to learn about many different areas in highly dynamic environments, I think this carrer path is a perfect fit for me. 
-Shortly after my PhD corrections, I started learning about the minutes and details of *ML* and *NN* and how to apply them to real-life problems.
+After my PhD I realised how important it was for me to have a mid-term tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
+Therefore, some months ago I started learning about the minutes and details of *ML* and *NN* and became passionate about the wide diversity of genuinely interesting techniques that one can apply to a plethora of real-life problems.
 
-However, physics and data analysis are not my only *passions*. I also enjoy taking _amateur_ photographies (specially when travelling),   playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
+Admittedly, physics and data are not my only passions. I also enjoy taking _amateur_ photographies (specially when travelling), playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
 
-In this *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with on the way. 
+In this *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with along the way. 
 **Please feel free to drop me a line for any queries.**
 
-* Take a look at some of the things I've been working on lately on my [Github webpage](https://github.com/cuspime/Projects). Some of them need you to run them on your machine to be able to interact with them. Also, take a peak at my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/) for interesting data insights.
+* To see some of the things I've been working on, take a look at my [Github webpage](https://github.com/cuspime/Projects) or my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/) for interesting data insights.
 
 * These are some _COVID19_ **interactive plots** that I find both interesting and informative. *You can zoom in and out. Try also moving the cursor on top of the data and switch on/off data by __clicking__ on the legends of these tabs*.
 
@@ -31,22 +31,23 @@ In this *personal website* I'll share some of the things I find interesting (or 
 </iframe>
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
 
+* Tableau COVID Dashboard
+<div class='tableauPlaceholder' id='viz1593624941702' style='position: relative'><noscript><a href='https:&#47;&#47;cuspime.github.io&#47;'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID_15919263646180&#47;COVIDDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='COVID_15919263646180&#47;COVIDDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID_15919263646180&#47;COVIDDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1593624941702');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1075px';vizElement.style.maxWidth='1775px';vizElement.style.width='100%';vizElement.style.minHeight='1651px';vizElement.style.maxHeight='1951px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1075px';vizElement.style.maxWidth='1775px';vizElement.style.width='100%';vizElement.style.minHeight='1651px';vizElement.style.maxHeight='1951px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
 * There is a really useful online book to learn a myriad of things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
 
-* To learn how to do [social networks mining](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
+* To learn how to do social networks mining [click here.](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
 
 * One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras: 
 <iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="70"  frameborder="0" ></iframe>
 
 * For a technical and useful introduction to NN, use the [Google developers](https://codelabs.developers.google.com) site.
 
-* Some really interesting jupyter notebooks to learn from can be found in [this list](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#machine-learning-statistics-and-probability)
-
-* If you use the archive, take a look at [this great tool](https://myspires.ajainphysics.com/) to manage your LaTeX bibliography (courtesy of my friend Akash Jain).
+* If you use ArXiV, take a look at [this great tool](https://myspires.ajainphysics.com/) to manage your LaTeX bibliography (courtesy of my friend Akash Jain).
 
 * Also, if you're a physicist or a mathematician and haven heard of the [Mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), you're missing out! It's a lot of fun.
-
-* For the curious minds that want to know [how stuff works](https://www.howstuffworks.com/)
 
 * When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
 <iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" frameborder="0" allowfullscreen></iframe>
