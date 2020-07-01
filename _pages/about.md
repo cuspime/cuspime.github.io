@@ -25,13 +25,14 @@ In this *personal website* I'll share some of the things I find interesting (or 
 
 * To see some of the things I've been working on, take a look at my [Github webpage](https://github.com/cuspime/Projects) or my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/) for interesting data insights.
 
+<!--  
 * These are some _COVID19_ **interactive plots** that I find both interesting and informative. *You can zoom in and out. Try also moving the cursor on top of the data and switch on/off data by __clicking__ on the legends of these tabs*.
-
 <iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="150%"  height="620" style="-webkit-transform:scale(.8);-moz-transform-scale(1);" scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
+-->
 
-* Tableau COVID Dashboard
+* This is a COVID Dashboard displaying the Total and new number of cases, recoveries and deaths. By default this dashboard shows the World information but you may choose one or several countries by using Ctrl+Click on the map, you can also filter the data with the Date range or higlight labels by clicking on it. The last plot is an animation that can be activated with the play button at the bottom of the dashboard. In this plot, exponential growth (countries that are still at risk) continue to draw a straight diagonal line. Countries that are now safe will "exit" the diagonal. For a more detailed explanation of this curve, watch [this](https://www.youtube.com/watch?v=54XLXg4fYsc&t=239s) short video by [Minute Physics](https://www.youtube.com/user/minutephysics).
 <iframe src="https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="140%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
