@@ -13,7 +13,7 @@ redirect_from:
 </h1>
 ***
 
-My name is **Leopoldo Cuspinera** and I am a PhD in Theoretical Physics. For a long time now I have dedicated myself to understand some of the mechanisms by which the universe behaves the way it does. If you are interested in higher dimensional black holes, thermodynamics or the Randall-Sundrum braneworld model, you may find it interesting to take a look at the work I've been part of and that has been [published](https://cuspime.github.io/publications/). 
+My name is **Leopoldo Cuspinera** and I am a PhD in Theoretical Physics. For most of my adult life I have dedicated myself to understanding some of the mechanisms by which the universe behaves the way it does. If you are interested in higher dimensional black holes, thermodynamics or the Randall-Sundrum braneworld model, you may find it interesting to take a look at the work I've been part of and that has been [published](https://cuspime.github.io/publications/). 
 
 After my PhD I realised how important it was for me to have a mid-term tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
 Therefore, some months ago I started learning about the minutes and details of *ML* and *NN* and became passionate about the wide diversity of genuinely interesting techniques that one can apply to a plethora of real-life problems.
