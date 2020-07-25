@@ -1,6 +1,6 @@
 ---
 title: "Black hole embedding"
-excerpt: "One of the images obtained on [our paper](https://inspirehep.net/literature/1767690) when studying slowly accelerating, rotating, charged black hole immerse in an AdS spacetime
+excerpt: "One of the images displayed on [our paper](https://inspirehep.net/literature/1767690) where we study slowly accelerating, rotating, charged black hole immerse in an AdS spacetime
 <br/>
 
 "
