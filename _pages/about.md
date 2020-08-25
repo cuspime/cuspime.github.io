@@ -37,6 +37,9 @@ Play with it and let me know what you think.
 <iframe src="https://public.tableau.com/views/COVID_15919263646180/Story?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
+* Lately there has been a lot of unrest from binational couples who want to make politicians aware that *Love is not tourism*. On Twitter people have united under the **#LoveIsNotTourism** hashtag. This movement has had a great impact in reuniting families from some countries in the European Union, however, there are still many changes to be made to reunite everybody with their loved ones. To lend a hand I have made a project that follows this movement on Twitter:
+<iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:retry=yes&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+</iframe>
 
 
 * There is a really useful online book to learn a myriad of things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
