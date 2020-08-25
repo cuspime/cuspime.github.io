@@ -38,7 +38,7 @@ Play with it and let me know what you think.
 </iframe>
 
 * Twitter analysis of #LoveIsNotTourism
-<iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link" >
+<iframe src="https://public.tableau.com/profile/leocuspinera#!/vizhome/Twitter_15978796836980/Main_Story" >
 </iframe>
 <!--
 * Italy
