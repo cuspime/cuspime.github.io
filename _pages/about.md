@@ -37,6 +37,9 @@ Play with it and let me know what you think.
 <iframe src="https://public.tableau.com/views/COVID_15919263646180/Story?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
+* Twitter analysis of #LoveIsNotTourism
+<iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link" >
+</iframe>
 <!--
 * Italy
 <iframe src="https://public.tableau.com/views/Italy_15919154685920/Italia?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px">
