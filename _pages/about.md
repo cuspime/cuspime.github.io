@@ -8,22 +8,20 @@ redirect_from:
   - /about.html
 ---
 
-<h1 style="color:#28B463; font-family:candara; font-size:200%; text-align:center;"> 
+<h1 style="color:#28B463; font-size:200%; text-align:center;"> 
     Hello there!
 </h1>
 ***
 
-My name is **Leopoldo Cuspinera** and I am a PhD in Theoretical Physics. For most of my adult life I have dedicated my time to understanding some of the mechanisms by which the universe behaves the way it does. If you are interested in higher dimensional black holes, thermodynamics or the Randall-Sundrum braneworld model, you may find it interesting to take a look at the work I've been part of and that has been [published](https://cuspime.github.io/publications/). 
+I am a data scientist with a PhD in Theoretical Physics. For most of my adult life I have dedicated my time to understanding some of the mechanisms by which the universe behaves the way it does. If you are interested in higher dimensional black holes, thermodynamics or the Randall-Sundrum braneworld model, you may find it interesting to take a look at the [work](https://cuspime.github.io/publications/) I've been part of and that has been. 
 
-After my PhD I realised how important it was for me to have a mid-term tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
-Therefore, some months ago I started learning about the minutes and details of *ML* and *NN* and became passionate about the wide diversity of genuinely interesting techniques that one can apply to a plethora of real-life problems.
+At the end of my PhD sstudies Idecided I wanted to take a path that would lead me to have a mid-term tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
+To see some of the things I've been working on, take a look at my [Github webpage](https://github.com/cuspime/Projects) or my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/) for interesting data insights.
 
 Admittedly, physics and data are not my only passions. I also enjoy taking _amateur_ photographies (specially when travelling), playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
 
 In this *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with along the way. 
 **Please feel free to drop me a line for any queries.**
-
-* To see some of the things I've been working on, take a look at my [Github webpage](https://github.com/cuspime/Projects) or my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/) for interesting data insights.
 
 <!--  
 * These are some _COVID19_ **interactive plots** that I find both interesting and informative. *You can zoom in and out. Try also moving the cursor on top of the data and switch on/off data by __clicking__ on the legends of these tabs*.
