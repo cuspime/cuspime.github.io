@@ -1,4 +1,4 @@
-i# Welcome to Jekyll!
+# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Leo's website"
 title_separator          : ""
 name                     : &name "PhD. Juan Leopoldo Cuspinera Contreras"
-description              : &description "Data Scientist with a PhD. in Theoretical Physics interested in general learning, finance, travelling and photography"
+description              : &description "Data Scientist with a PhD. in Theoretical Physics interested in learning, travelling and photography"
 url                      : https://cuspime.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "cuspime.github.io"
@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "PhD. Leopoldo Cuspinera Contreras"
   avatar           : "FotoCV.jpg"
-  bio              : "Data Scientist with a PhD. in Theoretical Physics interested in general learning, finance, travelling and photography"
-  location         : "Venezia, Italia"
-  employer         : "Esosphera SRL"
+  bio              : "Data Scientist with a PhD. in Theoretical Physics interested in learning, travelling and photography"
+  location         : "Puebla, Mexico"
+  employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=Ru2FJ_cAAAAJ&hl=en&oi=sra"
   email            : "leocuspinera@gmail.com"
