@@ -1,11 +1,14 @@
 ---
-title: 'Future Blog Post'
-date: 2199-01-01
-permalink: /posts/2012/08/blog-post-4/
+title: 'How to make a Sankey Diagram on Tableau'
+date: 2021-04-04
+permalink: /Tableau-Sankey-Diagram
 tags:
-  - cool posts
-  - category1
-  - category2
+  - Tableau
+  - Sankey
+  - Chart
+  - Diagram
+  - Data analysis
+  - Flux
 ---
 
-This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
+Right, so here we are
