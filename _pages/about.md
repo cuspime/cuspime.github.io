@@ -61,8 +61,10 @@ Play with it and let me know what you think.
 * Also, if you're a physicist or a mathematician and haven heard of the [Mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), you're missing out! It's a lot of fun.
 
 * When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
-<iframe  width="100" height="70" src="https://www.youtube.com/embed/s9qlNBBoFG4" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
+<iframe  width="100" height="50" src="https://www.youtube.com/embed/s9qlNBBoFG4" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
 
+* One of my most recent findings on YouTube includes art explained to the layman like myself: 
+<iframe  width="100" height="50" src="https://www.youtube.com/watch?v=wDjq2gPGIHk" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
 
 
 <br><br><br>
