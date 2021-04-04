@@ -35,17 +35,15 @@ Play with it and let me know what you think.
 </iframe>
 -->
 
+* When the borders closed due to the COVID-19 pandemia, several families were torn apart. For a long time the situation for binational couples was remarkably difficult because we did not have means to prove that we were in a commited relationship to governments so a temporary visa was out of the question. However, there was a movement that brought hope to these families by sharing the most recent information across several countries and in many difficult and particular situations. In the end the movement made politicians aware that **Love is not tourism**. On Twitter people have united under the *#LoveIsNotTourism* hashtag. This dashboard shows some information about the Twittersphere and the people that pushed the most this movement as well as an interesting sentiment analysis:
+<iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+</iframe>
+
+* One of the projects I have enjoyed the most whilst developing aimed to [detect pneumonia with a CNN](https://github.com/cuspime/Projects/blob/master/ChestXRays.ipynb) where I have shown how to make use of a kaggle dataset and several modules and functions of the Tensorflow, Keras and sklearn libraries to preprocess the data, create the CNN, fit and thest the convolutional NN. The resulting neural network was able to predict whether or not a patient had pneumonia with an 88.9% accuracy and an f1 score of  of about 0.914.
 
 * Before moving to Italy, I decided to make a little research about the population, income, the behaviour of money spenditure, the price of houses by region and the car accidents distribution. One can never be too informed about these matters.
 <iframe src="https://public.tableau.com/views/Italy_15919154685920/Italia?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
-
-
-
-* Lately there has been a lot of unrest from binational couples who want to make politicians aware that *Love is not tourism*. On Twitter people have united under the **#LoveIsNotTourism** hashtag. This movement has had a great impact in reuniting families from some countries in the European Union, however, there are still many changes to be made to reunite everybody with their loved ones. To lend a hand I have made a project that follows this movement on Twitter:
-<iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
-</iframe>
-
 
 * There is a really useful online book that I used to learn many things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
 
