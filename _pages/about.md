@@ -13,10 +13,10 @@ redirect_from:
 </h1>
 ***
 
-I am a data scientist with a PhD in Theoretical Physics. For most of my life I have studied ways to describe everything that surrounds us. Particularly, during my PhD studies I worked on theories considering the possibility of spacetime nucleation in the vicinity of higher dimensional black holes, thermodynamics and the Randall-Sundrum braneworld model so if that's something that might interest you, consider taking a look at some of [these articles](https://cuspime.github.io/publications/) where I've been involved. 
+I am a data scientist with a PhD in Theoretical Physics. For most of my life I have studied ways to describe everything that surrounds us. Particularly, during my PhD studies I worked on theories considering spacetime nucleation in the vicinity of small higher dimensional black holes within the Randall-Sundrum braneworld model and thermodynamics. If that's something that might interest you, consider taking a look at some of [these articles](https://cuspime.github.io/publications/). 
 
 After finishing my PhD, I decided to take a path that would lead me to see the results of my work, hopefully having a tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
-To see some of the things I've been working on lately, take a look at my [Github](https://github.com/cuspime/Projects) or my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/).
+To see some of the things I've been working on lately, take a look at my [Github](https://github.com/cuspime/Projects) or my [Tableau Public] (https://public.tableau.com/profile/leocuspinera#!/) profile.
 
 Admittedly, physics and data are not my only passions. I also enjoy taking _amateur_ photographies (specially when travelling), playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
 Therefore, since this is a *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with along the way. 
@@ -36,7 +36,7 @@ Play with it and let me know what you think.
 -->
 
 * When the borders closed due to the COVID-19 pandemia, several families were torn apart. For a long time the situation for binational couples was remarkably difficult because we did not have means to prove that we were in a commited relationship to governments so a temporary visa was out of the question. However, there was a movement that brought hope to these families by sharing the most recent information across several countries and in many difficult and particular situations. In the end the movement made politicians aware that **Love is not tourism**. This dashboard shows some information about the Twittersphere and the people that pushed the most this movement as well as an interesting sentiment analysis:
-<iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="100%"  height="620 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
 * One of the projects I have enjoyed the most whilst developing aimed to [detect pneumonia with a CNN](https://github.com/cuspime/Projects/blob/master/ChestXRays.ipynb) where I have shown how to make use of a kaggle dataset and several modules and functions of the Tensorflow, Keras and sklearn libraries to preprocess the data, create the CNN, fit and thest the convolutional NN. The resulting neural network was able to predict whether or not a patient had pneumonia with an 88.9% accuracy and an f1 score of  of about 0.914.
@@ -44,7 +44,7 @@ Play with it and let me know what you think.
 * One of the latest projects I've been part of studies [MSc. Victor Cuspinera](https://github.com/vcuspinera)'s idea on the [Canada response to COVID-19](https://github.com/vcuspinera/Canada_response_covid). This project makes a  sentiment analysis of people's tweets referring to Canadian Government's accounts after Government announcement of policies as response of COVID-19 to know how much of an impact these policies had on the population.
 
 * Before moving to Italy, I decided to make a little research about the population, income, the behaviour of money spenditure, the price of houses by region and the car accidents distribution. One can never be too informed about these matters.
-<iframe src="https://public.tableau.com/views/Italy_15919154685920/Italia?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="100%"  height="620 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="https://public.tableau.com/views/Italy_15919154685920/Italia?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
 * There is a really useful online book that I used to learn many things about Python, Pandas, Seaborn, Machine learning and data science in general and can be found online, wait for it, for **free!!** Just [click here](https://jakevdp.github.io/PythonDataScienceHandbook/) and thank Jake.
