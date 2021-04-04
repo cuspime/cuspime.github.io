@@ -9,18 +9,17 @@ redirect_from:
 ---
 
 <h1 style="color:#28B463; font-size:200%; text-align:center;"> 
-    Hello there!
+    Hello
 </h1>
 ***
 
-I am a data scientist with a PhD in Theoretical Physics. For most of my adult life I have dedicated my time to understanding some of the mechanisms by which the universe behaves the way it does. If you are interested in higher dimensional black holes, thermodynamics or the Randall-Sundrum braneworld model, you may find it interesting to take a look at the [work](https://cuspime.github.io/publications/) I've been part of and that has been. 
+I am a data scientist with a PhD in Theoretical Physics. For most of my life I have studied ways to describe everything that surrounds us. Particularly, during my PhD studies I worked on theories considering the possibility of spacetime nucleation in the vicinity of higher dimensional black holes, thermodynamics and the Randall-Sundrum braneworld model so if that's something that might interest you, consider taking a look at some of [these articles](https://cuspime.github.io/publications/) where I've been involved. 
 
-At the end of my PhD sstudies Idecided I wanted to take a path that would lead me to have a mid-term tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
-To see some of the things I've been working on, take a look at my [Github webpage](https://github.com/cuspime/Projects) or my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/) for interesting data insights.
+After finishing my PhD, I decided to take a path that would lead me to see the results of my work, hopefully having a tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
+To see some of the things I've been working on lately, take a look at my [Github webpage](https://github.com/cuspime/Projects) or my [Tableau profile](https://public.tableau.com/profile/leocuspinera#!/).
 
 Admittedly, physics and data are not my only passions. I also enjoy taking _amateur_ photographies (specially when travelling), playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
-
-In this *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with along the way. 
+Therefore, since this is a *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with along the way. 
 **Please feel free to drop me a line for any queries.**
 
 <!--  
@@ -28,19 +27,20 @@ In this *personal website* I'll share some of the things I find interesting (or 
 <iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="150%"  height="620" style="-webkit-transform:scale(.8);-moz-transform-scale(1);" scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
--->
-
+-
+-
 * This COVID Dashboard displays both the Total and new number of cases, recoveries and deaths. By default it shows *World wide* information but you may choose one or several countries by using **Ctrl+Click** on the map, you can also filter the data with the Date range or higlight labels by clicking on it. The last plot is an animation that can be activated with the play button at the bottom of the dashboard. In this plot, exponential growth (countries that are still at risk) continue to draw a straight diagonal line. Countries that are now safe will "exit" the diagonal. For a more detailed explanation of this curve, watch [this short video](https://www.youtube.com/watch?v=54XLXg4fYsc&t=239s) by [Minute Physics](https://www.youtube.com/user/minutephysics).
 Play with it and let me know what you think.
 <iframe src="https://public.tableau.com/views/COVID_15919263646180/Story?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
+-->
 
-<!--
-* Italy
+
+* Before moving to Italy, I decided to make a little research about some of its regions (tantamount to states) and provinces
 <iframe src="https://public.tableau.com/views/Italy_15919154685920/Italia?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px">
 </iframe>
 <div class='tableauPlaceholder' id='viz1598358426562' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_15978796836980&#47;Main_Story&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Twitter_15978796836980&#47;Main_Story' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;Twitter_15978796836980&#47;Main_Story&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1598358426562');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='900px';vizElement.style.maxWidth='1500px';vizElement.style.width='100%';vizElement.style.minHeight='777px';vizElement.style.maxHeight='827px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
--->
+
 
 * Lately there has been a lot of unrest from binational couples who want to make politicians aware that *Love is not tourism*. On Twitter people have united under the **#LoveIsNotTourism** hashtag. This movement has had a great impact in reuniting families from some countries in the European Union, however, there are still many changes to be made to reunite everybody with their loved ones. To lend a hand I have made a project that follows this movement on Twitter:
 <iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
