@@ -36,7 +36,7 @@ Play with it and let me know what you think.
 -->
 
 
-* Before moving to Italy, I decided to make a little research about some of its regions (tantamount to states) and provinces
+* Before moving to Italy, I decided to make a little research about the population, income, the behaviour of money spenditure, the price of houses by region and the car accidents distribution. One can never be too informed about these matters.
 <iframe src="https://public.tableau.com/views/Italy_15919154685920/Italia?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
