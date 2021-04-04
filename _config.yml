@@ -83,7 +83,7 @@ author:
   name             : "PhD. Leopoldo Cuspinera Contreras"
   avatar           : "FotoCV.jpg"
   bio              : "Data Scientist with a PhD. in Theoretical Physics interested in general learning, finance, travelling and photography"
-  location         : "Puebla, Mexico"
+  location         : "Venezia, Italia"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=Ru2FJ_cAAAAJ&hl=en&oi=sra"
@@ -94,7 +94,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "leopoldo.cuspinera"
+  facebook         : #"leopoldo.cuspinera"
   foursquare       :
   github           : "cuspime"
   google_plus      :
