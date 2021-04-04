@@ -41,6 +41,8 @@ Play with it and let me know what you think.
 
 * One of the projects I have enjoyed the most whilst developing aimed to [detect pneumonia with a CNN](https://github.com/cuspime/Projects/blob/master/ChestXRays.ipynb) where I have shown how to make use of a kaggle dataset and several modules and functions of the Tensorflow, Keras and sklearn libraries to preprocess the data, create the CNN, fit and thest the convolutional NN. The resulting neural network was able to predict whether or not a patient had pneumonia with an 88.9% accuracy and an f1 score of  of about 0.914.
 
+* One of the latest projects I've been part of studies [MSc. Victor Cuspinera](https://github.com/vcuspinera)'s idea on the [Canada response to COVID-19](https://github.com/vcuspinera/Canada_response_covid). This project makes a  sentiment analysis of people's tweets referring to Canadian Government's accounts after Government announcement of policies as response of COVID-19 to know how much of an impact these policies had on the population.
+
 * Before moving to Italy, I decided to make a little research about the population, income, the behaviour of money spenditure, the price of houses by region and the car accidents distribution. One can never be too informed about these matters.
 <iframe src="https://public.tableau.com/views/Italy_15919154685920/Italia?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="100%"  height="620 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
