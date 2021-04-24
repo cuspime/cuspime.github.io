@@ -29,7 +29,7 @@ Therefore, since this is a *personal website* I'll share some of the things I fi
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
 -->
 
-* Since the beginnings of the pandemia, I have kept track of its development in several countries vis this COVID Dashboard which displays both the Total and new number of cases, recoveries and deaths. By default it shows *World wide* information but you may choose one or several countries by using **Ctrl+Click** on the map.  
+* Since the beginnings of the pandemia, I have kept track of its development in several countries with this COVID Dashboard which displays both the Total and new number of cases, recoveries and deaths (per million citizens for each country by default).
 If you find it useful and would like me to add some information send me a line.
 <iframe src="https://public.tableau.com/views/COVID_15919263646180/Story?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
