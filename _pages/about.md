@@ -27,17 +27,18 @@ Therefore, since this is a *personal website* I'll share some of the things I fi
 <iframe src="covid.html"  sandbox="allow-same-origin allow-scripts" width="150%"  height="620" style="-webkit-transform:scale(.8);-moz-transform-scale(1);" scrolling="no" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 (If you would like to have some other countries being kept track of or some other plots you might find interesting, please drop me a line!)
--
--
-* This COVID Dashboard displays both the Total and new number of cases, recoveries and deaths. By default it shows *World wide* information but you may choose one or several countries by using **Ctrl+Click** on the map, you can also filter the data with the Date range or higlight labels by clicking on it. The last plot is an animation that can be activated with the play button at the bottom of the dashboard. In this plot, exponential growth (countries that are still at risk) continue to draw a straight diagonal line. Countries that are now safe will "exit" the diagonal. For a more detailed explanation of this curve, watch [this short video](https://www.youtube.com/watch?v=54XLXg4fYsc&t=239s) by [Minute Physics](https://www.youtube.com/user/minutephysics).
-Play with it and let me know what you think.
-<iframe src="https://public.tableau.com/views/COVID_15919263646180/Story?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
-</iframe>
 -->
 
+* Since the beginnings of the pandemia, I have kept track of its development in several countries vis this COVID Dashboard which displays both the Total and new number of cases, recoveries and deaths. By default it shows *World wide* information but you may choose one or several countries by using **Ctrl+Click** on the map.  
+If you find it useful and would like me to add some information send me a line.
+<iframe src="https://public.tableau.com/views/COVID_15919263646180/Story?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+</iframe>
+
+<!--
 * When the borders closed due to the COVID-19 pandemia, several families were torn apart. For a long time the situation for binational couples was remarkably difficult because we did not have means to prove that we were in a commited relationship to governments so a temporary visa was out of the question. However, there was a movement that brought hope to these families by sharing the most recent information across several countries and in many difficult and particular situations. In the end the movement made politicians aware that **Love is not tourism**. This dashboard shows some information about the Twittersphere and the people that pushed the most this movement as well as an interesting sentiment analysis:
 <iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
+-->
 
 * One of the projects I have enjoyed the most whilst developing aimed to [detect pneumonia with a CNN](https://github.com/cuspime/Projects/blob/master/ChestXRays.ipynb) where I have shown how to make use of a kaggle dataset and several modules and functions of the Tensorflow, Keras and sklearn libraries to preprocess the data, create the CNN, fit and thest the convolutional NN. The resulting neural network was able to predict whether or not a patient had pneumonia with an 88.9% accuracy and an f1 score of  of about 0.914.
 
