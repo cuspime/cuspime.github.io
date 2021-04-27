@@ -9,11 +9,11 @@ redirect_from:
 ---
 
 <h1 style="color:#28B463; font-size:200%; text-align:center;"> 
-    Hey, welcome!
+    Hi! Welcome to my personal website
 </h1>
 ***
 
-I am a data scientist with a PhD in Theoretical Physics. For most of my life I have studied ways to describe everything that surrounds us. Particularly, during my PhD studies I worked on theories considering spacetime nucleation in the vicinity of small higher dimensional black holes within the Randall-Sundrum braneworld model and thermodynamics. If that's something that might interest you, consider taking a look at some of [these articles](https://cuspime.github.io/publications/). 
+I am a data scientist with a PhD in Theoretical Physics. For most of my life I have studied ways to describe everything that surrounds us. During my PhD studies I applied this knowledge to study the thermodynamics of *superentropic black holes* and spacetime nucleation in the vicinity of small, higher dimensional black holes in a Randall-Sundrum braneworld scenario. If that's something that might interest you, consider taking a look at [these articles](https://cuspime.github.io/publications/). 
 
 After finishing my PhD, I decided to take a path that would lead me to see the results of my work, hopefully having a tangible, positive impact on society and so I decided to apply the skills I've learned so far as a *Data Scientist*. 
 To see some of the things I've been working on lately, take a look at my [Github](https://github.com/cuspime/Projects) or my [Tableau Public] (https://public.tableau.com/profile/leocuspinera#!/) profile.
@@ -31,7 +31,7 @@ Therefore, since this is a *personal website* I'll share some of the things I fi
 
 * Since the beginnings of the pandemia, I have kept track of its development in several countries with this COVID Dashboard which displays both the Total and new number of cases, recoveries and deaths (per million citizens for each country by default).
 If you find it useful and would like me to add some information send me a line.
-<iframe src="https://public.tableau.com/views/COVID_15919263646180/Story?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link"  width="150%"  height="920 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="150%"  height="920 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
 <!--
