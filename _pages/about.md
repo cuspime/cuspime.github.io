@@ -31,7 +31,7 @@ Therefore, since this is a *personal website* I'll share some of the things I fi
 
 * Since the beginnings of the pandemia, I have kept track of its development in several countries with this COVID Dashboard which displays both the Total and new number of cases, recoveries and deaths (per million citizens for each country by default).
 If you find it useful and would like me to add some information send me a line.
-<iframe src="https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="150%"  height="920 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en-GB&:display_count=y&:origin=viz_share_link&Countryregion=Italy,Mexico,UK"  width="120%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
 <!--
