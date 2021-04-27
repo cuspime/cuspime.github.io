@@ -31,10 +31,16 @@ Therefore, since this is a *personal website* I'll share some of the things I fi
 
 * Since the beginnings of the pandemia, I have kept track of its development in several countries with this COVID Dashboard which displays both the Total and new number of cases, recoveries and deaths (per million citizens for each country by default).
 If you find it useful and would like me to add some information send me a line.
-<iframe src="https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en-GB&:display_count=y&:origin=viz_share_link&:embed=yes&Countryregion=Italy,Mexico,UK"  width="120%"  height="920 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
+<iframe src="https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en-GB&:display_count=y&:origin=viz_share_link&:embed=yes"  width="120%"  height="920 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
 
 <!--
+# This is the link that can be used to filter something on Tableau embeddings
+https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en-GB&:display_count=y&:origin=viz_share_link&:embed=yes&Countryregion=Italy,Mexico,UK
+.
+.
+.
+.
 * When the borders closed due to the COVID-19 pandemia, several families were torn apart. For a long time the situation for binational couples was remarkably difficult because we did not have means to prove that we were in a commited relationship to governments so a temporary visa was out of the question. However, there was a movement that brought hope to these families by sharing the most recent information across several countries and in many difficult and particular situations. In the end the movement made politicians aware that **Love is not tourism**. This dashboard shows some information about the Twittersphere and the people that pushed the most this movement as well as an interesting sentiment analysis:
 <iframe src="https://public.tableau.com/views/Twitter_15978796836980/Main_Story?:language=en-GB&:display_count=y&:origin=viz_share_link"  width="130%"  height="820 px" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);"  scrolling="yes" seamless="seamless" frameborder="0" allowfullscreen>
 </iframe>
