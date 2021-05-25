@@ -1,6 +1,6 @@
 ---
 title: 'How to make a Sankey Diagram on Tableau'
-date: 2021-04-04
+date: 2021-25-05
 permalink: /Tableau-Sankey-Diagram
 tags:
   - Tableau
