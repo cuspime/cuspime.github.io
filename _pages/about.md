@@ -70,10 +70,10 @@ https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en
 * Also, if you're a physicist or a mathematician and haven heard of the [Mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), you're missing out! It's a lot of fun.
 
 * As I grew up, I learned that I actually liked history. I guess it's one of those acquired tastes, like beer, coffee or whisky (all of them beverages I learned to love with time). However, there's something deeply wrong with the way it is taught in schools. I much rather learn about all the interesting stories that actually happened to change the world. Only a great storyteller like [Historia Civilis](https://www.youtube.com/channel/UCv_vLHiWVBh_FR9vbeuiY-A) would be able to tell a nice story and give life to little colourful squares whilst teaching history.
-<iframe  width="80" height="40" src="https://www.youtube.com/embed/s9qlNBBoFG4" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.7);" frameborder="0" allowfullscreen></iframe>
+<iframe  width="80" height="40" src="https://www.youtube.com/embed/s9qlNBBoFG4" style="-webkit-transform:scale(0.7);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
 
 * One of my most recent findings on YouTube includes art explained to the layman like myself: 
-<iframe  width="80" height="40" src="https://www.youtube.com/embed/wDjq2gPGIHk" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.7);" frameborder="0" allowfullscreen></iframe>
+<iframe  width="80" height="40" src="https://www.youtube.com/embed/wDjq2gPGIHk" style="-webkit-transform:scale(0.7);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
 
 
 <br><br><br>
