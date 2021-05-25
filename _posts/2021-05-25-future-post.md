@@ -74,6 +74,7 @@ END
 ```
 
 9. We now need to create 10 fields. If you prefer, you can create those with 1 in its name and duplicate them while changing in their definitions from 1 to 2 where referenced. Stay with me, It'll all be worth it.
+
 ```Tableau
 Max for Min Position 1:
 
