@@ -8,12 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-<h1 style="color:#28B463; font-size:200%; text-align:center;"> 
-    [Ciao!](https://www.youtube.com/watch?v=ZAsNO9eXLgM)
-</h1>
-<h1 style="color:#C6C6C6; font-size:60%; text-align:left;"> 
-    [Not all those who wander are lost](https://en.wikipedia.org/wiki/All_that_glitters_is_not_gold#In_popular_culture)
-</h1>
+[<h1 style="color:#28B463; font-size:200%; text-align:center;">Ciao!</h1>](https://www.youtube.com/watch?v=ZAsNO9eXLgM)
+[<h1 style="color:#C6C6C6; font-size:60%; text-align:left;"> Not all those who wander are lost </h1>](https://en.wikipedia.org/wiki/All_that_glitters_is_not_gold#In_popular_culture)
 
 
 ***
