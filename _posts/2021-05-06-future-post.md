@@ -113,15 +113,19 @@ WINDOW_SUM([Min Position 2])
 13. Now put the subdivisions you want on the left of the Sankey diagram on top of the Marks card, immediately below the subdivisions you want on the right of the diagram, the **Path Index** and the **Path Frame (bin)** in **that specific order**. I know this might be somewhat confusing so hopefully this image might help:
 <img src='https://github.com/cuspime/cuspime.github.io/blob/master/images/Screenshot%202021-05-25%20at%2015.52.28.png?raw=true' width='70%' align='center' >
 </img>
-**NB:** As you can see, in this tutorial we have decided to go from a division of the data by *Tipo fuori orario* to a division by *Tipo Gestito*.
+
+**NB**: As you can see, in this tutorial we have decided to go from a division of the data by *Tipo fuori orario* to a division by *Tipo Gestito*.
+
 14. Next, right click on **T** and Compute it using *Path Frame (bin)*
 15. Now here comes the fun part. To make this all happen you need to tell all the Sankey Polygons' dependencies to be calculated in a very, very specific way. To be able to do it, you need to right click on it and **Edit Table Calculation**.
 16. Make sure all your calculations match the following order (remember that your left and right subdivisions have to match the placement of *Tipo fuori orario* and *Tipo Gestito* respectively):
 <img src='https://github.com/cuspime/cuspime.github.io/blob/master/images/Screenshot%202021-05-25%20at%2016.22.16.png?raw=true' width='90%' align='center' >
 </img>
+
 Even though it is hard to go one by one, you'll get there. Just make sure all the fields are in the correct order.
 
-You'll end up with something like this when you complete all these steps:
+
+When you complete all these steps you'll end up with something like this
 <img src='https://github.com/cuspime/cuspime.github.io/blob/master/images/Screenshot%202021-05-25%20at%2016.25.21.png?raw=true' width='90%' align='center' >
 </img>
 
