@@ -168,7 +168,7 @@ So go have fun with Sankey Diagrams!
  
  
 
-
+ 
 
 ***
 <a name="footnote1">1</a>: The core information on how to do this viz was beautifully gathered by [Ian Baldwin](https://www.theinformationlab.co.uk/2018/03/09/build-sankey-diagram-tableau-without-data-prep-beforehand/).
