@@ -47,7 +47,9 @@ THEN 0 ELSE 97 END
 ```
   For this calculation aims to ensure that the data can be divided by **\[Dimension_1\]** in 2. The easiest way of achieving it is by comapring the entries to its minimum (however it is not guaranteed that this will indeed be the case). **If for some reason you do not get a Sankey Diagram at the end, then you surely have to modify this field**. Try and change the **LOD** and keep adding fields like **\[Granularity_n\]**.
 
-
+5. We now need to create bins out of this field. To do so make a right click on *Path Frame*, *Create*, *Bins...* . Now modify the bin size to 1. It should look something like this:
+<img src='https://github.com/cuspime/cuspime.github.io/blob/master/S1.png?raw=true' width='10%' align='left' >
+</img>
 
 
 ***
