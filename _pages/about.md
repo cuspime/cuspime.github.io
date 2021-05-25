@@ -9,8 +9,13 @@ redirect_from:
 ---
 
 <h1 style="color:#28B463; font-size:200%; text-align:center;"> 
-    Hi! Welcome to my personal website
+    [Ciao!](https://www.youtube.com/watch?v=ZAsNO9eXLgM)
 </h1>
+<h1 style="color:#C6C6C6; font-size:60%; text-align:left;"> 
+    [Not all those who wander are lost](https://en.wikipedia.org/wiki/All_that_glitters_is_not_gold#In_popular_culture)
+</h1>
+
+
 ***
 
 I am a data scientist with a PhD in Theoretical Physics. For most of my life I have studied ways to describe everything that surrounds us. During my PhD studies I applied this knowledge to study the thermodynamics of *superentropic black holes* and spacetime nucleation in the vicinity of small, higher dimensional black holes in a Randall-Sundrum braneworld scenario. If that's something that might interest you, consider taking a look at [these articles](https://cuspime.github.io/publications/). 
@@ -58,7 +63,7 @@ https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en
 
 * To learn how to do social networks mining [click here.](https://nbviewer.jupyter.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/)
 
-* One of the nicest Youtube channels I have ever came accross is **3Blue1Brown**. Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras: 
+* One of the nicest Youtube channels I have ever came accross is [**3Blue1Brown**](https://www.youtube.com/c/3blue1brown). Particularly, I find this series on neural networks quite useful to understand what people are doing when calling keras: 
 <iframe src="https://www.youtube.com/embed/aircAruvnKk"  width="100" height="50"  frameborder="0" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" ></iframe>
 
 * For a technical and useful introduction to NN, use the [Google developers](https://codelabs.developers.google.com) site.
@@ -67,11 +72,11 @@ https://public.tableau.com/views/COVID_15919263646180/DENSDashboard?:language=en
 
 * Also, if you're a physicist or a mathematician and haven heard of the [Mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), you're missing out! It's a lot of fun.
 
-* When it comes down to history, I love stories and I think that one of the best youtubers to tell a nice story and make little squares come to live is 
-<iframe  width="100" height="50" src="https://www.youtube.com/embed/s9qlNBBoFG4" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
+* As I grew up, I learned that I actually liked history but not the way it is taught in schools. I much rather learn about interesting stories that happened to change the world. I think that one of the best youtubers to tell a nice story and make little squares come to live is [Historia Civilis](https://www.youtube.com/channel/UCv_vLHiWVBh_FR9vbeuiY-A):
+<iframe  width="80" height="60" src="https://www.youtube.com/embed/s9qlNBBoFG4" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
 
 * One of my most recent findings on YouTube includes art explained to the layman like myself: 
-<iframe  width="100" height="50" src="https://www.youtube.com/watch?v=wDjq2gPGIHk" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
+<iframe  width="80" height="60" src="https://www.youtube.com/embed/wDjq2gPGIHk" style="-webkit-transform:scale(0.9);-moz-transform-scale(0.9);" frameborder="0" allowfullscreen></iframe>
 
 
 <br><br><br>
