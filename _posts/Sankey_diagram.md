@@ -48,9 +48,54 @@ THEN 0 ELSE 97 END
   For this calculation aims to ensure that the data can be divided by **\[Dimension_1\]** in 2. The easiest way of achieving it is by comapring the entries to its minimum (however it is not guaranteed that this will indeed be the case). **If for some reason you do not get a Sankey Diagram at the end, then you surely have to modify this field**. Try and change the **LOD** and keep adding fields like **\[Granularity_n\]**.
 
 5. We now need to create bins out of this field. To do so make a right click on *Path Frame*, *Create*, *Bins...* . Now modify the bin size to 1. It should look something like this:
-<img src='https://github.com/cuspime/cuspime.github.io/blob/master/S1.png?raw=true' width='100%' align='center' >
+<img src='https://github.com/cuspime/cuspime.github.io/blob/master/S1.png?raw=true' width='50%' align='center' >
 </img>
 
-6. 
+6. Create a Field named **Path Index** which is simply defined as INDEX():
+```Tableau 
+Path Index
+INDEX()
+```
+
+7. Create a Field **T** which will work as the independent variable of the diagram.
+```Tableau
+T
+IF [Path Index] < 50
+THEN -6 + (([Path Index]-1)%49)/4
+ELSE  6 - (([Path Index]-1)%49)/4
+END
+```
+
+8. Create a field named **Sigmoid** which will be used as the dependent variable of the diagram. This will define the smoothness of the transition of the curves:
+```Tableau
+Sigmoid
+1/(1+EXP(-[T]) )
+```
+
+9. Create a field **Sankey Arm Size**. If you have decided to divide your Sankey diagram taking into account something different to the number of records, you should change here the *SUM( \[Number of Records\] )* with whatever your field is.
+```Tableau
+Sankey Arm Size
+SUM( [Number of Records] ) / TOTAL(SUM([Number of Records]))
+```
+
+10. Create a field named **Sankey Polygons**
+```Tableau
+Sankey Polygons
+IF [Path Index] > 49
+THEN [Max Position 1 Wrap]+([Max Position 2 Wrap]-[Max Position 1 Wrap])*[Sigmoid]
+ELSE [Min Position 1 Wrap]+([Min Position 2 Wrap]-[Min Position 1 Wrap])*[Sigmoid]
+END
+```
+
+
+
+
+
+
+
+
+
+
+
 ***
 <a name="footnote1">1</a>: The core information on how to do this viz was beautifully gathered by [Ian Baldwin](https://www.theinformationlab.co.uk/2018/03/09/build-sankey-diagram-tableau-without-data-prep-beforehand/).
