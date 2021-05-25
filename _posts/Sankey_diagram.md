@@ -16,7 +16,8 @@ Right, so here we are. After several attempts and a myriad of hours trying to co
 So, first of all we need some data. As you may know by now, some people will tell you to duplicate your data so that you can match your data from the left side to the same data on the right of the diagram. This might become inconvenient if you have hundreds of thousands of rows or if you do not want to filter half of your data for the remainder of the sheets. 
 It doesn't matter if you divide your flux by hierarchies or just completely unrelated labels, for the time being, we will do the basics and then give pointers into how to modify this<sup>[1](#footnote1)</sup>.
 
-To *recycle* the hard work done for this viz, you can **create 2 parameters** that will work as selectors to divide your data. This is usually done as a list of integers which can be displayed as a string within Tableau. You can then create two very similar fields, one for each selector
+1. To *reuse* the hard work done for this viz, you can **create 2 parameters** that will work as selectors to divide your data. It is much better if you just create a list of integers. These integers can then be asked to be displayed as a string within Tableau.
+2. Now create two (very similar) fields, one for each selector parameter created:
 ```Tableau
 Dimension 1
 CASE [Select Dimension 1]
@@ -32,6 +33,19 @@ CASE [Select Dimension 2]
   //...
 END
 ```
+3. Select what will be the measure that you will be using to divide your data. To know study things like the flux of calls, you need to make use of SUM(\[Number of records\]). If you prefer to do it on another measure, things actually simplify.
+4. Create a **Path Frame**: 
+```Tableau
+Path Frame
+IF {FIXED  [Dimension_1]: SUM([Number of Records])} 
+= 
+{FIXED [Granularity_1],[Granularity_2]: 
+    (MAX( {FIXED  [Dimension_1]: SUM([Number of Records] ) 
+          } ) )
+} 
+THEN 0 ELSE 97 END
+```
+  For this calculation aims to ensure that the data can be divided by **\[Dimension_1\]** in 2. The easiest way of achieving it is by comapring the entries to its minimum (however it is not guaranteed that this will indeed be the case). **If for some reason you do not get a Sankey Diagram at the end, then you surely have to modify this field**. Try and change the **LOD** and keep adding fields like **\[Granularity_n\]**.
 
 
 
