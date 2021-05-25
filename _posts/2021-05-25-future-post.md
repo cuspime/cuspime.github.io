@@ -75,35 +75,53 @@ END
 
 9. We now need to create 10 fields. If you prefer, you can create those with 1 in its name and duplicate them while changing in their definitions from 1 to 2 where referenced. Stay with me, It'll all be worth it.
 ```Tableau
-
 Max for Min Position 1:
+
 RUNNING_SUM([Sankey Arm Size])
+
 
 Max Position 1:
+
 RUNNING_SUM([Sankey Arm Size])
+
 
 Max Position 1 Wrap :
+
 WINDOW_SUM([Max Position 1])
 
+
 Min Position 1:
+
 RUNNING_SUM([Max for Min Position 1])-[Sankey Arm Size]
 
+
 Min Position 1 Wrap:
+
 WINDOW_SUM([Min Position 1])
 
+
 Max for Min Position 2:
+
 RUNNING_SUM([Sankey Arm Size])
+
 
 Max Position 2:
+
 RUNNING_SUM([Sankey Arm Size])
 
+
 Max Position 2 Wrap:
+
 WINDOW_SUM([Max Position 2])
 
+
 Min Position 2:
+
 RUNNING_SUM([Max for Min Position 2])-[Sankey Arm Size]
 
+
 Min Position 2 Wrap:
+
 WINDOW_SUM([Min Position 2])
 ```
 
