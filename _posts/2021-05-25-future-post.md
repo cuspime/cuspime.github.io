@@ -77,52 +77,33 @@ END
 
 ```Tableau
 Max for Min Position 1:
-
 RUNNING_SUM([Sankey Arm Size])
-
 
 Max Position 1:
-
 RUNNING_SUM([Sankey Arm Size])
-
 
 Max Position 1 Wrap :
-
 WINDOW_SUM([Max Position 1])
 
-
 Min Position 1:
-
 RUNNING_SUM([Max for Min Position 1])-[Sankey Arm Size]
 
-
 Min Position 1 Wrap:
-
 WINDOW_SUM([Min Position 1])
 
-
 Max for Min Position 2:
-
 RUNNING_SUM([Sankey Arm Size])
-
 
 Max Position 2:
-
 RUNNING_SUM([Sankey Arm Size])
 
-
 Max Position 2 Wrap:
-
 WINDOW_SUM([Max Position 2])
 
-
 Min Position 2:
-
 RUNNING_SUM([Max for Min Position 2])-[Sankey Arm Size]
 
-
 Min Position 2 Wrap:
-
 WINDOW_SUM([Min Position 2])
 ```
 
