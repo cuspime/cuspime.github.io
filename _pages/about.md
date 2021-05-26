@@ -18,7 +18,7 @@ Even though I usually fill in headlines and self descriptions as *data scientist
 For most of my life I have studied ways to describe our surroundings and during my PhD studies I applied this knowledge to study the thermodynamics of *superentropic black holes* and *spacetime nucleation* in the vicinity of small, higher dimensional black holes in a Randall-Sundrum braneworld scenario. If that's something that might interest you, consider taking a look at [these articles](https://cuspime.github.io/publications/). 
 
 Later on, after finishing my PhD I decided to take a path that would lead me to witness short and mid-term results of my work, hopefully having a tangible, positive impact on society. After giving it some thought, I decided the right move for me was to become a *Data Scientist*. 
-To see some of the things I've been working on lately, take a look at my [Github](https://github.com/cuspime/Projects) or my [Tableau Public] (https://public.tableau.com/profile/leocuspinera#!/) profile.
+To see some of the things I've been working on lately, take a look at my [Github](https://github.com/cuspime/Projects) or my [Tableau Public](https://public.tableau.com/profile/leocuspinera/) profile.
 
 Admittedly, physics and data are not my only passions. I enjoy a plethora of things like taking _amateur_ photographies (specially when travelling), playing the guitar, finding out language connections, learning something new, cooking on Sundays and spending time with my family.
 Therefore, since this is a *personal website* I'll share some of the things I find interesting (or useful), some things I've done in the past and hopefully helpful links and comments about the things I've struggled with along the way. 
