@@ -11,6 +11,11 @@ tags:
   - Flux
 ---
 This post shows how to create a Sankey diagram and not waste your time miserably. [Sankey diagrams](https://en.wikipedia.org/wiki/Sankey_diagram) were first used to show energy flux in machines and they help us understand were the energy in a cycle goes and more or less the proportions of its ramifications as it proceeds.
+<figure>
+<img src='https://github.com/cuspime/cuspime.github.io/blob/master/images/Screenshot%202021-05-27%20at%2009.55.25.png?raw=true' width='50%' align='center' >
+  <figcaption> Flux diagram with 2 Sankey sections.</figcaption>
+</figure>
+
 
 Right, so here we are. After several attempts and a myriad of hours trying to come up with a good solution to create a Sankey Diagram in Tableau to show the flux of information generated back at my workplace, I found a way that puts together several sources (some of which I cannot find again) which help in creating a Sankey Diagram. Here I will explain clearly many of the steps necessary to come up with this beautiful piece of viz. Hopefully this will help you and save you many hours of wasted hours looking at outdated sources with people doubling their data (that's just nonsense imo).
 
@@ -112,7 +117,6 @@ WINDOW_SUM([Min Position 2])
 12. Drag **Path Index** to the Path Mark (or put it in the marks card and change its type to Path)
 13. Now put the subdivisions you want on the left of the Sankey diagram on top of the Marks card, immediately below the subdivisions you want on the right of the diagram, the **Path Index** and the **Path Frame (bin)** in **that specific order**. I know this might be somewhat confusing so hopefully this image might help:
 <img src='https://github.com/cuspime/cuspime.github.io/blob/master/images/Screenshot%202021-05-25%20at%2015.52.28.png?raw=true' width='70%' align='center' >
-</img>
 
 **NB**: As you can see, in this tutorial we have decided to go from a division of the data by *Tipo fuori orario* to a division by *Tipo Gestito*.
 
