@@ -11,7 +11,6 @@ redirect_from:
 <h1 style="color:#28B463; font-size:200%; text-align:center;">Ciao!</h1>
 
 <h2 style="color:#C6C6C6; font-size:80%; text-align:left;"> Welcome to my personal website</h2>
-***
 
 Even though I usually fill in headlines and self descriptions as *data scientist with a PhD in Theoretical Physics*, I actually just think of myself as a deeply curious and passionate person. 
 
