@@ -120,14 +120,12 @@ WINDOW_SUM([Min Position 2])
 15. Now here comes the fun part. To make this all happen you need to tell all the Sankey Polygons' dependencies to be calculated in a very, very specific way. To be able to do it, you need to right click on it and **Edit Table Calculation**.
 16. Make sure all your calculations match the following order (remember that your left and right subdivisions have to match the placement of *Tipo fuori orario* and *Tipo Gestito* respectively):
 <img src='https://github.com/cuspime/cuspime.github.io/blob/master/images/Screenshot%202021-05-25%20at%2016.22.16.png?raw=true' width='90%' align='center' >
-</img>
 
 Even though it is hard to go one by one, you'll get there. Just make sure all the fields are in the correct order.
 
 
 When you complete all these steps you'll end up with something like this
 <img src='https://github.com/cuspime/cuspime.github.io/blob/master/images/Screenshot%202021-05-25%20at%2016.25.21.png?raw=true' width='90%' align='center' >
-</img>
 
 If you don't, here there are some potential sources of error (I'll write them down in ascending time consumption when looking for mistakes):
 * In the sheet you did not put your the fields in order in the Marks card.
