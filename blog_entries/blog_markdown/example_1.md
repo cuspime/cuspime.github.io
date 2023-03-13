@@ -40,20 +40,21 @@ HAVING dist_id > 1
 
 To see some YouTube videos on this markdown just do (notice the **embed** keyword after www.youtube.com/):
 ```html
-<div align="center"><iframe
-    width="640"
-    height="480"
+<div align="center">
+    <iframe
+    width="100%"
+    height="680"
     src="https://www.youtube.com/embed/PI22k8-Yi0s"
     frameborder="0"
-    allow="autoplay; encrypted-media"
+    allowfullscreen
 >
 </iframe>
 </div>
 ```
 
 <div align="center"><iframe
-    width="640"
-    height="480"
+    width="100%"
+    height="500"
     src="https://www.youtube.com/embed/PI22k8-Yi0s"
     frameborder="0"
     allow="autoplay; encrypted-media"
