@@ -1,5 +1,2 @@
 # cuspime.github.io
-Github Pages
-
-## WIP
-Massive WIP
+Github repo to host personal website.
