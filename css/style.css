@@ -121,8 +121,11 @@ a:focus {
     height: 40vh
 }
 
-,
-.main-gallery,
+.main-gallery {
+    height: 75vh
+}
+.main-blog,
+
 .main-contact {
     height: 75vh;
 }
@@ -309,6 +312,10 @@ a:focus {
 
 .main-gallery {
     background: url('../images/my_pictures/20170423_141108-01.jpeg') no-repeat;
+}
+
+.main-blog {
+    background: url('../images/my_pictures/blackboard_PI.jpg') no-repeat;
 }
 
 .main-contact {
@@ -741,9 +748,10 @@ footer .footer-copyright {
     .main-about,
     .main-single-post,
     .main-gallery,
+    .main-blog,
     .main-contact {
         height: 35vh;
-    }
+    },
 }
 
 @media (max-width: 768px) {
