@@ -19,11 +19,13 @@ def convert_jupyter_notebook_to_html(jupyter_notebook_path:str, background_img_p
      )
 
      html_path = os.path.join(saving_directory, os.path.splitext(os.path.basename(jupyter_notebook_path))[0] + '.html')
+     html_path = os.path.normpath(html_path).replace('\\','/')
+     print(html_path)
      formatting(html_path)
 
 
 def formatting(html_path:str):
-
+     
      with open(html_path,  encoding="utf8") as html:
           
           nb_body = bs(html, 'html.parser').prettify()
@@ -143,5 +145,7 @@ def formatting(html_path:str):
 
 
 if __name__ == '__main__':
-     # jupyter_notebook_path = r'blog_entries/blog_jupyter_nb/simple_example.ipynb'
-     # convert_jupyter_notebook_to_html(jupyter_notebook_path)
+     jupyter_notebook_path = 'blog_entries/blog_jupyter_nb/Mediterranean_sea_analysis.ipynb'
+     convert_jupyter_notebook_to_html(jupyter_notebook_path)
+     # print('Transforming jupyter notebook')
+     

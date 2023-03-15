@@ -3,11 +3,6 @@ import os
 import re
 import markdown
 
-# Sources
-source_markdown_file = r"blog_entries/blog_markdown/example_1.md"
-background_img_path = os.path.join(r"../../images/my_pictures/", r"blackboard_PI.jpg")
-subtitle = None
-keywords = None
 
 def convert_markdown_to_html(
     source_markdown_file: str,
@@ -178,6 +173,15 @@ def convert_markdown_to_html(
     file_html.close()
 
 
-convert_markdown_to_html(
-    source_markdown_file, background_img_path, subtitle=subtitle, keywords=keywords
-)
+if __name__ == "__main__":
+    # Sources
+    source_markdown_file = r"blog_entries/blog_markdown/executable_shell_scripts.md"
+    background_img_path = os.path.join(
+        r"../../images/my_pictures/", 
+        r"blackboard_PI.jpg"
+    )
+    subtitle = None
+    keywords = ['bash', 'shell']
+    convert_markdown_to_html(
+        source_markdown_file, background_img_path, subtitle=subtitle, keywords=keywords
+    )
