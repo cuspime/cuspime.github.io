@@ -8,4 +8,3 @@ Github repo to host personal website.
 - [ ] improve favicon
 - [ ] blog post to Akash's https://myspires.ajainphysics.com/library.php
 - [ ] Improve about section
-- [x] Add email sent
