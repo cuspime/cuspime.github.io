@@ -52,9 +52,8 @@ h3 {
 
 h4 {
     color: #666;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: normal;
-    letter-spacing: 2px;
 }
 
 p {
@@ -127,7 +126,7 @@ a:focus {
 
 .main-blog,
 .main-contact {
-    height: 75vh;
+    height: 25vh;
 }
 
 .overlay {
@@ -167,7 +166,7 @@ a:focus {
 }
 
 .sk-spinner-wordpress.sk-spinner {
-    background-color: #bfba55;
+    background-color: #2d65b9;
     width: 40px;
     height: 40px;
     border-radius: 40px;
@@ -303,7 +302,8 @@ a:focus {
 }
 
 .main-about {
-    background: url('../images/about-bg.jpg') no-repeat;
+    background: url('../images/my_pictures/Leo_github.jpg') no-repeat;
+    height: 600px;
 }
 
 .main-single-post {
@@ -311,7 +311,7 @@ a:focus {
 }
 
 .main-gallery {
-    background: url('../images/my_pictures/20170423_141108-01.jpeg') no-repeat;
+    background: url('../images/my_pictures/CM_verde_colina.jpeg') 70% 90% no-repeat;
 }
 
 .main-blog {
@@ -319,7 +319,7 @@ a:focus {
 }
 
 .main-contact {
-    background: url('../images/contact-bg.jpg') no-repeat;
+    background: url('../images/my_pictures/blackboard_PI.jpg') no-repeat;
 }
 
 #particles-js {
@@ -377,6 +377,27 @@ a:focus {
     padding-top: 12px;
 }
 
+#about .btn {
+    background: #23425f;
+    border: 2px solid #ffffff;
+    border-radius: 100px;
+    color: rgb(231, 222, 222);
+    font-family: 'Merriweather', serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+    padding: 13px 22px;
+    margin-top: 42px;
+    transition: all 0.3s ease-in-out;
+}
+
+#about .btn:hover {
+    background: transparent;
+    border-color: #2e5479;
+    color: #44a2e0;
+}
+
 
 /*---------------------------------------
    Gallery section              
@@ -392,6 +413,11 @@ a:focus {
     padding-right: 0px;
 }
 
+#gallery .col-md-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 #gallery .gallery-thumb {
     background-color: #ffffff;
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
@@ -400,6 +426,9 @@ a:focus {
     position: relative;
     top: 0px;
     transition: all 0.4s ease-in-out;
+    object-fit: none;
+    object-fit: cover;
+    height: 300px;
 }
 
 #gallery .gallery-thumb:hover {
@@ -410,50 +439,37 @@ a:focus {
 #gallery .gallery-thumb img {
     width: 100%;
     object-fit: cover;
+    height: 300px;
+}
+
+#gallery .gallery-thumbWide {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: 0px;
+    transition: all 0.4s ease-in-out;
+    object-fit: none;
+    object-fit: cover;
+    height: 300px;
+}
+
+#gallery .gallery-thumbWide:hover {
+    box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+    top: -5px;
+}
+
+#gallery .gallery-thumbWide img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
 }
 
 #gallery .col-md-12 p {
-    padding-top: 22px;
+    padding-left: 0px;
+    padding-right: 0px;
     text-align: center;
-}
-
-#gallery .thumb-post img {
-    object-fit: none;
-    /* Do not scale the image */
-    /* object-position: center; */
-    /* Center the image within the element */
-    /* width: 100%; */
-    /* max-height: 250px; */
-    /* padding-left: 0px;
-    padding-right: 0px; */
-    /* flex-basis: 48%; */
-    object-fit: cover;
-    height: 300px;
-}
-
-#gallery .gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#gallery .gallery-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-#gallery .gallery-row img {
-    flex-basis: 48%;
-    object-fit: cover;
-    height: 300px;
-    margin-right: 2%;
-}
-
-#gallery .gallery-row img:last-child {
-    margin-right: 0;
 }
 
 
@@ -466,7 +482,11 @@ a:focus {
 }
 
 #contact .col-md-12 {
-    padding-left: 0;
+    padding-left: 0px;
+}
+
+#contact .col-md-6 {
+    padding-left: 0px;
 }
 
 #contact form {
@@ -502,7 +522,7 @@ a:focus {
     background: #333;
 }
 
-
+#contact input
 /*---------------------------------------
    Blog section              
 -----------------------------------------*/
