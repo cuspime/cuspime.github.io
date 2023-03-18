@@ -27,6 +27,7 @@ git commit -m '${commit_msg}'
 
 git push
 ```
+
 If you run this within a git folder, this sh script shows the current status of your current local branch,
 pulls changes, asks for a commit message, commits for you and pushes in an automated way. Again, this is not
 recommended.
