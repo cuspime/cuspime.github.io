@@ -224,7 +224,7 @@ a:focus {
     font-family: 'Merriweather', serif;
     /* font-weight: bold; */
     /* text-transform: uppercase; */
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin: 0;
 }
 
@@ -316,6 +316,7 @@ a:focus {
 
 .main-blog {
     background: url('../images/my_pictures/blackboard_PI.jpg') no-repeat;
+    height: 400px;
 }
 
 .main-contact {
