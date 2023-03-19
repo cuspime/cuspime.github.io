@@ -37,3 +37,16 @@ Now we need to change the mode of our `example.sh` shell script with
 ```bash
 chmod +x example.sh
 ```
+
+We can now create an alias (for more information [follow this link](https://askubuntu.com/questions/1414/how-to-create-a-permanent-alias)) for this executable so that it can be run from anywhere. To do so, we just need to add a line in your `~/.bash_aliases` file:
+
+```bash
+code ~/.bash_aliases
+```
+
+We'll assign a meaningful name to our `example.sh` shell script, since this is the way we'll use it the most. 
+Let's call it `quick_push`
+
+```bash
+alias quick_push='~/example.sh'
+```
