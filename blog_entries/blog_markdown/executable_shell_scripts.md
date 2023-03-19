@@ -48,5 +48,5 @@ We'll assign a meaningful name to our `example.sh` shell script, since this is t
 Let's call it `quick_push`
 
 ```bash
-alias quick_push='~/example.sh'
+alias quick_push='~/sh_scripts/example.sh'
 ```
