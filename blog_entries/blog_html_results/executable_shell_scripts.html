@@ -83,15 +83,50 @@
                                         </div>
 
                                         <div class="blog-post-format">
-                                             <span><i class="fa fa-date"></i> January, 2023 </span>
+                                             <span><i class="fa fa-date"></i> Mar, 2023 </span>
                                         </div>
 
                                         <div class="blog-post-des">
                                         <p>To begin with we should select a folder where to store all the scripts we will create, say <code>sh_scripts</code> under your home directory:</p>
-<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/sh_scripts
+<div class="codehilite"><pre><span></span><code>mkdir -p ~/sh_scripts
 </code></pre></div>
 
-<p>TBC...</p>
+<p>Now you can create a <code>.sh</code> file. Here I make use of <code>code</code> (Visual Studio Code) but using your preferred editor makes no
+ difference. </p>
+<div class="codehilite"><pre><span></span><code>code example.sh
+</code></pre></div>
+
+<p>In the editor you may now write the lines you would like to aoutomate. I'll make a silly example (it is not recommended
+to do something like this with git):</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+git status
+git pull
+git add .
+
+<span class="nb">echo</span> <span class="s2">&quot;Wrtie commit message: &quot;</span>
+<span class="nb">read</span> commit_msg
+git commit -m <span class="s1">&#39;${commit_msg}&#39;</span>
+
+git push
+</code></pre></div>
+
+<p>If you run this within a git folder, this sh script shows the current status of your current local branch,
+pulls changes, asks for a commit message, commits for you and pushes in an automated way. Again, this is not
+recommended.</p>
+<p>Now we need to change the mode of our <code>example.sh</code> shell script with</p>
+<div class="codehilite"><pre><span></span><code>chmod +x example.sh
+</code></pre></div>
+
+<p>We can now create an alias (for more information <a href="https://askubuntu.com/questions/1414/how-to-create-a-permanent-alias">follow this link</a>) for this executable so that it can be run from anywhere. To do so, we just need to add a line in your <code>~/.bash_aliases</code> file:</p>
+<div class="codehilite"><pre><span></span><code>code ~/.bash_aliases
+</code></pre></div>
+
+<p>We'll assign a meaningful name to our <code>example.sh</code> shell script, since this is the way we'll use it the most. 
+Let's call it <code>quick_push</code></p>
+<div class="codehilite"><pre><span></span><code><span class="nb">alias</span> <span class="nv">quick_push</span><span class="o">=</span><span class="s1">&#39;~/sh_scripts/example.sh&#39;</span>
+</code></pre></div>
+
+<p>Now, to make use of this command, go to any <em>new</em> terminal and run it.</p>
                                         </div>
 
                                    </div>

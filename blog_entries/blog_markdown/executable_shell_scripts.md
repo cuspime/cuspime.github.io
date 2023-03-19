@@ -50,3 +50,5 @@ Let's call it `quick_push`
 ```bash
 alias quick_push='~/sh_scripts/example.sh'
 ```
+
+Now, to make use of this command, go to any *new* terminal and run it.

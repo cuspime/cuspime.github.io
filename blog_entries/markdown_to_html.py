@@ -136,7 +136,7 @@ def convert_markdown_to_html(
                                         </div>
 
                                         <div class="blog-post-format">
-                                             <span><i class="fa fa-date"></i> January, 2023 </span>
+                                             <span><i class="fa fa-date"></i> {date} </span>
                                         </div>
 
                                         <div class="blog-post-des">
@@ -180,6 +180,7 @@ if __name__ == "__main__":
         r"../../images/my_pictures/", 
         r"blackboard_PI.jpg"
     )
+    date = 'Mar, 2023'
     subtitle = None
     keywords = ['bash', 'shell']
     convert_markdown_to_html(
