@@ -1,104 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
 
-          <!DOCTYPE html>
-          <html lang="en">
+<head>
 
-          <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="description" content="None">
+    <meta name="keywords" content="bash, shell">
+    <meta name="author" content="Leopoldo Cuspinera">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-               <meta charset="UTF-8">
-               <meta http-equiv="X-UA-Compatible">
-               <meta name="description" content="None">
-               <meta name="keywords" content="bash, shell">
-               <meta name="author" content="Leopoldo Cuspinera">
-               <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-               <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Executable shell scripts</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
 
-               <title>Executable shell scripts</title>
-               <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
-               <link rel="stylesheet" href="../../css/bootstrap.min.css">
-               <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+    <style>
+    .main-single-post {
+            background: url('../../images/my_pictures/blackboard_PI.jpg') no-repeat;
+        }
+    }
+    </style>
 
-               <!-- Main css -->
-               <link rel="stylesheet" href="../../css/style.css">
-               <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
-               <style>.main-single-post {background: url('../../images/my_pictures/blackboard_PI.jpg') no-repeat;}}</style>
-               
 
-          </head>
+</head>
 
-          <body>
+<body>
 
-               <!-- Navigation section  -->
+    <!-- Navigation section  -->
 
-               <div class="navbar navbar-default navbar-static-top" role="navigation">
-                    <div class="container">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
 
-                         <div class="navbar-header">
-                              <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                    <span class="icon icon-bar"></span>
                                    <span class="icon icon-bar"></span>
                                    <span class="icon icon-bar"></span>
                               </button>
-                              <a href="../../index.html" class="navbar-brand">Leopoldo Cuspinera</a>
-                         </div>
-                         <div class="collapse navbar-collapse">
-                              <ul class="nav navbar-nav navbar-right">
-                                   <li><a href="../../index.html">Home</a></li>
-                                   <li><a href="../../about.html">About</a></li>
-                                   <li><a href="../../gallery.html">Gallery</a></li>
-                                   <li><a href="../../blog.html">Blog</a></li>
-                                   <li><a href="../../contact.html">Contact</a></li>
-                              </ul>
-                         </div>
+                <a href="../../index.html" class="navbar-brand">Leopoldo Cuspinera</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../gallery.html">Gallery</a></li>
+                    <li><a href="../../blog.html">Blog</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </div>
 
-                    </div>
-               </div>
+        </div>
+    </div>
 
-               <!-- Main title of blog section -->
+    <!-- Main title of blog section -->
 
-               <section id="home" class="main-single-post parallax-section">
-                    <div class="overlay"></div>
-                    <div class="container">
-                         <div class="row">
+    <section id="home" class="main-single-post parallax-section">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
 
-                              <div class="col-md-12 col-sm-12">
-                                   <h1>Executable shell scripts</h1>
-                              </div>
+                <div class="col-md-12 col-sm-12">
+                    <h1>Executable shell scripts</h1>
+                </div>
 
-                         </div>
-                    </div>
-               </section>
+            </div>
+        </div>
+    </section>
 
-               <!-- Blog Single Post Section -->
+    <!-- Blog Single Post Section -->
 
-               <section id="blog-single-post">
-                    <div class="container">
-                         <div class="row">
+    <section id="blog-single-post">
+        <div class="container">
+            <div class="row">
 
-                              <div class="col-md-offset-1 col-md-10 col-sm-12">
-                                   <div class="blog-single-post-thumb">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="blog-single-post-thumb">
 
 
-                                        <div class="blog-post-title">
-                                             
-                                        </div>
+                        <div class="blog-post-title">
 
-                                        <div class="blog-post-format">
-                                             <span><i class="fa fa-date"></i> Mar, 2023 </span>
-                                        </div>
+                        </div>
 
-                                        <div class="blog-post-des">
-                                        <p>To begin with we should select a folder where to store all the scripts we will create, say <code>sh_scripts</code> under your home directory:</p>
-<div class="codehilite"><pre><span></span><code>mkdir -p ~/sh_scripts
+                        <div class="blog-post-format">
+                            <span><i class="fa fa-date"></i> Mar, 2023 </span>
+                        </div>
+
+                        <div class="blog-post-des">
+                            <p>To begin with we should select a folder where to store all the scripts we will create, say <code>sh_scripts</code> under your home directory:</p>
+                            <div class="codehilite"><pre><span></span><code>mkdir -p ~/sh_scripts
 </code></pre></div>
 
-<p>Now you can create a <code>.sh</code> file. Here I make use of <code>code</code> (Visual Studio Code) but using your preferred editor makes no
- difference. </p>
-<div class="codehilite"><pre><span></span><code>code example.sh
+                            <p>Now you can create a <code>.sh</code> file. Here I make use of <code>code</code> (Visual Studio Code) but using your preferred editor makes no difference. </p>
+                            <div class="codehilite"><pre><span></span><code>code example.sh
 </code></pre></div>
 
-<p>In the editor you may now write the lines you would like to aoutomate. I'll make a silly example (it is not recommended
-to do something like this with git):</p>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+                            <p>In the editor you may now write the lines you would like to aoutomate. I'll make a silly example (it is not recommended to do something like this with git):</p>
+                            <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 git status
 git pull
 git add .
@@ -110,46 +112,46 @@ git commit -m <span class="s1">&#39;${commit_msg}&#39;</span>
 git push
 </code></pre></div>
 
-<p>If you run this within a git folder, this sh script shows the current status of your current local branch,
-pulls changes, asks for a commit message, commits for you and pushes in an automated way. Again, this is not
-recommended.</p>
-<p>Now we need to change the mode of our <code>example.sh</code> shell script with</p>
-<div class="codehilite"><pre><span></span><code>chmod +x example.sh
+                            <p>If you run this within a git folder, this sh script shows the current status of your current local branch, pulls changes, asks for a commit message, commits for you and pushes in an automated way. Again, this is not recommended.
+                            </p>
+                            <p>Now we need to change the mode of our <code>example.sh</code> shell script with</p>
+                            <div class="codehilite"><pre><span></span><code>chmod +x example.sh
 </code></pre></div>
 
-<p>We can now create an alias (for more information <a href="https://askubuntu.com/questions/1414/how-to-create-a-permanent-alias">follow this link</a>) for this executable so that it can be run from anywhere. To do so, we just need to add a line in your <code>~/.bash_aliases</code> file:</p>
-<div class="codehilite"><pre><span></span><code>code ~/.bash_aliases
+                            <p>We can now create an alias (for more information <a href="https://askubuntu.com/questions/1414/how-to-create-a-permanent-alias">follow this link</a>) for this executable so that it can be run from anywhere. To do so, we just
+                                need to add a line in your <code>~/.bash_aliases</code> file:</p>
+                            <div class="codehilite"><pre><span></span><code>code ~/.bash_aliases
 </code></pre></div>
 
-<p>We'll assign a meaningful name to our <code>example.sh</code> shell script, since this is the way we'll use it the most. 
-Let's call it <code>quick_push</code></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">alias</span> <span class="nv">quick_push</span><span class="o">=</span><span class="s1">&#39;~/sh_scripts/example.sh&#39;</span>
+                            <p>We'll assign a meaningful name to our <code>example.sh</code> shell script, since this is the way we'll use it the most. Let's call it <code>quick_push</code></p>
+                            <div class="codehilite"><pre><span></span><code><span class="nb">alias</span> <span class="nv">quick_push</span><span class="o">=</span><span class="s1">&#39;~/sh_scripts/example.sh&#39;</span>
 </code></pre></div>
 
-<p>Now, to make use of this command, go to any <em>new</em> terminal and run it.</p>
-                                        </div>
+                            <p>Now, to make use of this command, go to any <em>new</em> terminal and run it.</p>
+                        </div>
 
-                                   </div>
-                              </div>
-                         </div>
-               </section>
+                    </div>
+                </div>
+            </div>
+    </section>
 
-               <!-- Footer Section -->
+    <!-- Footer Section -->
 
-               <footer id="app-footer"></footer>
-               <script async src="../../js/footer.js"></script>
+    <footer id="app-footer"></footer>
+    <script async src="../../js/footer.js"></script>
 
-               <!-- Back top -->
-               <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+    <!-- Back top -->
+    <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
-               <!-- SCRIPTS -->
-               <script src="./js/jquery.js"></script>
-               <script src="./js/bootstrap.min.js"></script>
-               <script src="./js/jquery.parallax.js"></script>
-               <script src="./js/custom.js"></script>
-               <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <!-- SCRIPTS -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.parallax.js"></script>
+    <script src="./js/custom.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 
-          </body>
+    <script src="./js/copy-clipboard-button.js"></script>
 
-          </html>
-          
+</body>
+
+</html>

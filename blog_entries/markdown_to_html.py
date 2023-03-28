@@ -20,33 +20,23 @@ def convert_markdown_to_html(
         keywords (list, optional): _description_. Defaults to None.
     """
     if background_img_path is None:
-        background_img_path = os.path.join(
-            r"../../images/my_pictures/", r"blackboard_PI.jpg"
-        )
+        background_img_path = os.path.join(r"../../images/my_pictures/", r"blackboard_PI.jpg")
 
     saving_directory = r"blog_entries/blog_html_results"
-    saving_file_name = (
-        "".join(os.path.split(source_markdown_file)[-1].split(".")[:-1]) + ".html"
-    )
+    saving_file_name = "".join(os.path.split(source_markdown_file)[-1].split(".")[:-1]) + ".html"
     saving_path = os.path.join(saving_directory, saving_file_name)
 
-    main_title = " ".join(
-        re.split(", |_|-|\.", "_".join(saving_file_name.split(".")[:-1]))
-    ).capitalize()
+    main_title = " ".join(re.split(", |_|-|\.", "_".join(saving_file_name.split(".")[:-1]))).capitalize()
 
     with open(source_markdown_file, "r") as md_f:
         md_used_lines = md_f.readlines()[2:]  # remove first line with title in markdown
-        md_html = markdown.markdown(
-            "".join(md_used_lines), extensions=["fenced_code", "codehilite"]
-        )
+        md_html = markdown.markdown("".join(md_used_lines), extensions=["fenced_code", "codehilite"])
 
     # Start the HTML file
     file_html = open(saving_path, "w")
 
     __image_including_string = (
-        "<style>.main-single-post {background: url('"
-        + background_img_path
-        + "') no-repeat;}}</style>"
+        "<style>.main-single-post {background: url('" + background_img_path + "') no-repeat;}}</style>"
     )
 
     # Adding the input data to the HTML file
@@ -168,6 +158,7 @@ def convert_markdown_to_html(
           </html>
           """
     )
+    # codehilite
 
     # Saving the data into the HTML file
     file_html.close()
@@ -176,13 +167,17 @@ def convert_markdown_to_html(
 if __name__ == "__main__":
     # Sources
     source_markdown_file = r"blog_entries/blog_markdown/executable_shell_scripts.md"
-    background_img_path = os.path.join(
-        r"../../images/my_pictures/", 
-        r"blackboard_PI.jpg"
-    )
-    date = 'Mar, 2023'
+    background_img_path = os.path.join(r"../../images/my_pictures/", r"blackboard_PI.jpg")
+    date = "Mar, 2023"
     subtitle = None
-    keywords = ['bash', 'shell']
-    convert_markdown_to_html(
-        source_markdown_file, background_img_path, subtitle=subtitle, keywords=keywords
-    )
+    keywords = ["bash", "shell"]
+    convert_markdown_to_html(source_markdown_file, background_img_path, subtitle=subtitle, keywords=keywords)
+
+    from distfit import distfit
+
+    distfit()
+    import scipy.stats as st
+
+    st.lognorm
+
+    
