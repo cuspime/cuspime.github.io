@@ -16,7 +16,7 @@ body {
 
 
 /*---------------------------------------
-    Typorgraphy              
+    Typography              
 -----------------------------------------*/
 
 h1,
@@ -356,6 +356,10 @@ a:focus {
     color: #ffffff;
 }
 
+#blog_block .col-md-8 {
+    padding-left: 5%;
+}
+
 
 /*---------------------------------------
    About section              
@@ -562,7 +566,7 @@ a:focus {
 }
 
 .blog-post-title a:hover {
-    color: #bfba55;
+    color: #4285eb;
 }
 
 .blog-post-format {

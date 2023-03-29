@@ -7,4 +7,4 @@ Github repo to host personal website.
 - [ ] include at least one jupyter notebook
 - [ ] improve favicon
 - [ ] blog post to Akash's https://myspires.ajainphysics.com/library.php
-- [ ] Improve about section
+- [x] Improve about section
