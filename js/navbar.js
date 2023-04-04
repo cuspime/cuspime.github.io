@@ -13,7 +13,6 @@ let navBar = `
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
             <li id="navbar-leopoldo cuspinera"><a href="index.html">Home</a></li>
-            <li id="navbar-about"><a href="about.html">About</a></li>
             <li id="navbar-projects"><a href="projects.html">Projects</a></li>
             <li id="navbar-gallery"><a href="gallery.html">Gallery</a></li>
             <li id="navbar-blog"><a href="blog.html">Blog</a></li>

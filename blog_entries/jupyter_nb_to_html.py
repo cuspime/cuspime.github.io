@@ -57,7 +57,7 @@ def formatting(html_path:str):
                <link rel="stylesheet" href="../../css/style.css">
                <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
                <link href="../../css/notebook.css" rel="stylesheet">
-               <link href="../../css\python_pygments.css" rel="stylesheet">
+               <link href="../../css/python_pygments.css" rel="stylesheet">
                
                {_image_background}
 
@@ -145,7 +145,7 @@ def formatting(html_path:str):
 
 
 if __name__ == '__main__':
-     jupyter_notebook_path = 'blog_entries/blog_jupyter_nb/Mediterranean_sea_analysis.ipynb'
+     jupyter_notebook_path = 'blog_entries/blog_jupyter_nb/simple_example.ipynb'
      convert_jupyter_notebook_to_html(jupyter_notebook_path)
      # print('Transforming jupyter notebook')
      

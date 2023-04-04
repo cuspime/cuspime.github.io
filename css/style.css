@@ -301,9 +301,9 @@ a:focus {
     height: 100vh;
 }
 
-.main-about {
+.main-projects {
     background: url('../images/my_pictures/Leo_github.jpg') no-repeat;
-    height: 600px;
+    height: 500px;
 }
 
 .main-single-post {
@@ -316,7 +316,7 @@ a:focus {
 
 .main-blog {
     background: url('../images/my_pictures/blackboard_PI.jpg') no-repeat;
-    height: 400px;
+    height: 500px;
 }
 
 .main-contact {
@@ -332,7 +332,7 @@ a:focus {
 }
 
 #home h4 {
-    color: #bfba55;
+    color: #4d638c;
 }
 
 #home .btn {
@@ -413,15 +413,9 @@ a:focus {
     padding-bottom: 2px;
 }
 
-#gallery .col-md-6 {
-    padding-left: 0px;
-    padding-right: 0px;
-}
+#gallery .col-md-6 {}
 
-#gallery .col-md-4 {
-    padding-left: 0px;
-    padding-right: 0px;
-}
+#gallery .col-md-4 {}
 
 #gallery .col-md-12 p {
     padding-left: 0px;
@@ -440,6 +434,7 @@ a:focus {
     object-fit: none;
     object-fit: cover;
     height: 300px;
+    padding: 2px;
 }
 
 #gallery .gallery-thumb:hover {
@@ -464,6 +459,7 @@ a:focus {
     object-fit: none;
     object-fit: cover;
     height: 300px;
+    padding-top: 2px;
 }
 
 #gallery .gallery-thumbWide:hover {
@@ -515,7 +511,7 @@ a:focus {
 }
 
 #contact input[type="submit"] {
-    background: #bfba55;
+    background: #4d638c;
     border-radius: 100px;
     border: none;
     color: #ffffff;
@@ -603,7 +599,7 @@ a:focus {
 }
 
 .blog-post-des .btn:hover {
-    background: #bfba55;
+    background: #4d638c;
     border-color: transparent;
     color: #ffffff;
 }
@@ -677,7 +673,7 @@ a:focus {
 }
 
 .blog-comment-form input[type="submit"] {
-    background: #bfba55;
+    background: #4d638c;
     border-radius: 100px;
     border: none;
     color: #ffffff;
@@ -770,7 +766,7 @@ footer .footer-copyright {
 }
 
 .go-top:hover {
-    background: #bfba55;
+    background: #4d638c;
     color: #ffffff;
 }
 
@@ -809,8 +805,8 @@ footer .footer-copyright {
 }
 
 .social-icon li a:hover {
-    border-color: #bfba55;
-    color: #bfba55;
+    border-color: #4d638c;
+    color: #4d638c;
     transform: scale(1.1);
 }
 
