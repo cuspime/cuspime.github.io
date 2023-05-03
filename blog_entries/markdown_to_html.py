@@ -199,11 +199,12 @@ def convert_markdown_to_html(
 
 if __name__ == "__main__":
     # Sources
-    source_markdown_file = r"blog_entries/blog_markdown/tips.md"
+    source_markdown_file = r"blog_entries/blog_markdown/sql_queries_order.md"
     background_img_path = os.path.join(r"../../images/my_pictures/", r"blackboard_PI.jpg")
     subtitle = None
     update_date = None
-    keywords = ["bash", "shell"]
+    keywords = ["sql", "tips"]
+
     convert_markdown_to_html(
         source_markdown_file, background_img_path, subtitle=subtitle, keywords=keywords, table_of_contents=True
     )
