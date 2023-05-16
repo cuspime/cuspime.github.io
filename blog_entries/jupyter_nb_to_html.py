@@ -29,7 +29,7 @@ def formatting(html_path:str):
      with open(html_path,  encoding="utf8") as html:
           
           nb_body = bs(html, 'html.parser').prettify()
-          title_name = ' '.join(os.path.splitext(os.path.basename(html_path))[0].split()).capitalize()
+          title_name = ' '.join(os.path.splitext(os.path.basename(html_path))[0].split()).capitalize().replace('_', ' ')
           subtitle=None
           keywords=None
           _image_background = "<style>.main-single-post {background: url('../../images/my_pictures/blackboard_PI.jpg') no-repeat;}}</style>"
@@ -145,7 +145,6 @@ def formatting(html_path:str):
 
 
 if __name__ == '__main__':
-     jupyter_notebook_path = 'blog_entries/blog_jupyter_nb/simple_example.ipynb'
+     jupyter_notebook_path = 'blog_entries/blog_jupyter_nb/Standard_error_of_the_mean.ipynb'
      convert_jupyter_notebook_to_html(jupyter_notebook_path)
      # print('Transforming jupyter notebook')
-     
