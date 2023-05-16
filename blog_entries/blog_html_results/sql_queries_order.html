@@ -1,0 +1,233 @@
+
+          <!DOCTYPE html>
+          <html lang="en">
+
+          <head>
+
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible">
+                <meta name="description" content="None">
+                <meta name="keywords" content="sql, tips">
+                <meta name="author" content="Leopoldo Cuspinera">
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+                <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+                <title>Sql queries order</title>
+                <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+                <link rel="stylesheet" href="../../css/bootstrap.min.css">
+                <link rel="stylesheet" href="../../css/font-awesome.min.css">
+
+                <!-- Main css -->
+                <link rel="stylesheet" href="../../css/style.css">
+                <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+                
+                <!-- Color code cells -->
+                <link href="../../css/markdown_pygments.css" rel="stylesheet">
+
+                <style>.main-single-post {background: url('../../images/my_pictures/blackboard_PI.jpg') no-repeat;}</style>
+                <style>
+                    h1 {
+                        font-size: 30px;
+                    }
+                    
+                    h2 {
+                        font-size: 24px;
+                    }
+                    
+                    h3 {
+                        font-size: 20px;
+                    }
+                </style>
+                
+               
+                
+          </head>
+
+          <body>
+
+               <!-- Navigation section  -->
+
+               <div class="navbar navbar-default navbar-static-top" role="navigation">
+                    <div class="container">
+
+                         <div class="navbar-header">
+                              <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                   <span class="icon icon-bar"></span>
+                                   <span class="icon icon-bar"></span>
+                                   <span class="icon icon-bar"></span>
+                              </button>
+                              <a href="../../index.html" class="navbar-brand">Leopoldo Cuspinera</a>
+                         </div>
+                         <div class="collapse navbar-collapse">
+                              <ul class="nav navbar-nav navbar-right">
+                                   <li><a href="../../index.html">Home</a></li>
+                                   <li><a href="../../about.html">About</a></li>
+                                   <li><a href="../../gallery.html">Gallery</a></li>
+                                   <li><a href="../../blog.html">Blog</a></li>
+                                   <li><a href="../../contact.html">Contact</a></li>
+                              </ul>
+                         </div>
+
+                    </div>
+               </div>
+
+               <!-- Main title of blog section -->
+
+               <section id="home" class="main-single-post parallax-section">
+                    <div class="overlay"></div>
+                    <div class="container">
+                         <div class="row">
+
+                              <div class="col-md-12 col-sm-12">
+                                   <h1 style="font-size:50px;">Sql queries order</h1>
+                              </div>
+
+                         </div>
+                    </div>
+               </section>
+
+               <!-- Blog Single Post Section -->
+
+               <section id="blog-single-post">
+                    <div class="container">
+                         <div class="row">
+
+                              <div class="col-md-offset-1 col-md-10 col-sm-12">
+                                   <div class="blog-single-post-thumb">
+
+
+                                        <div class="blog-post-title">
+                                             
+                                        </div>
+
+                                        
+
+                                        <div class="blog-post-des">
+                                        <h1>Table of Contents</h1>
+<ul>
+<li><a href="#General-query">General query</a><ul>
+<li><a href="#SELECT">SELECT</a></li>
+<li><a href="#FROM-and-JOIN">FROM and JOIN</a></li>
+<li><a href="#WHERE">WHERE</a></li>
+<li><a href="#GROUP-BY">GROUP BY</a></li>
+<li><a href="#HAVING">HAVING</a></li>
+<li><a href="#ORDER-BY">ORDER BY</a></li>
+<li><a href="#LIMIT">LIMIT</a></li>
+</ul>
+</li>
+<li><a href="#Order-of-execution">Order of execution</a></li>
+<li><a href="#Conclusion">Conclusion</a></li>
+</ul>
+<p>Structured Query Language (SQL) is a programming language used to manage and manipulate relational databases.
+It is essential for data management and analysis in many industries, from finance to healthcare to retail.
+Even though it is often rather easy to read a SQL query, the order of the statements that make a SQL query is important.
+If this order is not the proper one, the query will fail (in the best case scenario) or it can throw some pretty weird
+results that at first glance seem to be what we wanted.
+In this article, we will break down the structure of a simple, yet somewhat general SQL query.</p>
+<h2>General query</h2>
+<p>The form of a general single query on SQL often used by data scientists/analysts looks like:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"></span>
+<span class="w">    </span><span class="n">t1</span><span class="p">.</span><span class="n">col1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">FIRST</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">col2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">col3</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_col3</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">t2</span><span class="p">.</span><span class="n">col4</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">min_col4</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">t2</span><span class="p">.</span><span class="n">col4</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_col4</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t1</span><span class="w"></span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t2</span><span class="w"></span>
+<span class="k">ON</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">table1_id</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span>
+<span class="w">    </span><span class="n">t1</span><span class="p">.</span><span class="n">col2</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;min_value_col2&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;max_value_col2&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">col3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">&#39;min_value_col3&#39;</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">col1</span><span class="w"></span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">max_col4</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<p>This query selects data from two tables (<code>table1</code> and <code>table2</code>) and specifies several conditions and
+limitations on the results.
+Let's break down each part of the query to understand its purpose.</p>
+<h3>SELECT</h3>
+<p>The <code>SELECT</code> statement specifies which columns to retrieve from the tables.
+In this example, the <code>AS</code> keyword is used to create aliases for the columns, which can make the query easier to read and interpret.</p>
+<p><strong>NB</strong>: thes aliases are necessary for the part of the query that follows the <em>GROUP BY</em> statement (like <em>HAVING</em> and <em>ORDER BY</em>).</p>
+<h3>FROM and JOIN</h3>
+<p>The <code>FROM</code> statement specifies the tables to retrieve data from, and the <code>JOIN</code> statement specifies how to join the tables.
+In this example, the <code>ON</code> keyword is used to specify the <em>condition</em> for the join, which is ultimately a boolean
+condition for matching each row of both tables.
+If you ever have doubts about the
+operations' hierarchy for the condition you can always use parentheses to ensure each logical step in the condition.</p>
+<h3>WHERE</h3>
+<p>The <code>WHERE</code> statement specifies the condition that each row must meet to be included in the result set. </p>
+<h3>GROUP BY</h3>
+<p>The <code>GROUP BY</code> statement is used to group rows based on the values in one or more columns.
+In this example, the results are grouped by the values in <code>table1.col1</code>.</p>
+<h3>HAVING</h3>
+<p>The <code>HAVING</code> statement is used to specify a condition that must be met by each group to be included in the result set.
+In this example, the condition is that each group must have a count of rows greater than 1.</p>
+<h3>ORDER BY</h3>
+<p>The <code>ORDER BY</code> statement is used to sort the result set based on one or more columns.
+This statement will look for the alias of the column if given one.
+In this example, the results are sorted in descending order by the values in <code>max_col4</code>.</p>
+<h3>LIMIT</h3>
+<p>The <code>LIMIT</code> statement specifies the maximum number of rows to retrieve from the result set. In this example, the result set is limited to 10 rows.</p>
+<h2>Order of execution</h2>
+<p>SQL queries are not executed as they are written (or read). The query is parsed in a different logical order for these statements or operations.
+The importance of such order increases with the size of our database and the number of join operations amongst the used
+tables.</p>
+<p>The order is as follows:</p>
+<ol>
+<li>FROM (and JOIN)</li>
+<li>WHERE</li>
+<li>GROUP BY</li>
+<li>HAVING</li>
+<li>SELECT</li>
+<li>ORDER BY</li>
+<li>LIMIT</li>
+</ol>
+<p>It is thus important to keep this in mind when writing queries. If we only want a few rows to be matched from one of our
+tables, it is better to write a subquery, appending a <code>WITH</code> statement to the <code>SELECT</code> statement we want, otherwise the
+exectution plan will first join all rows and then filter by the condition of the WHERE statement.</p>
+<p>For example: </p>
+<div class="codehilite"><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">small_table</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t2</span><span class="w"></span>
+<span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">col1</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+<span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">small_table</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">st</span><span class="w"></span>
+<span class="k">ON</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">table1_id</span><span class="w"></span>
+</code></pre></div>
+
+<h2>Conclusion</h2>
+<p>Understanding the structure of a complex SQL query is essential for managing and analyzing data in a relational database.
+By using the <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, <code>HAVING</code>, <code>ORDER BY</code>, <code>LIMIT</code> and <code>WITH</code> statements, you can retrieve specific data from one or more tables based on your needs.</p>
+                                        </div>
+
+                                   </div>
+                              </div>
+                         </div>
+               </section>
+
+               <!-- Footer Section -->
+
+               <footer id="app-footer"></footer>
+               <script async src="../../js/footer.js"></script>
+
+               <!-- Back top -->
+               <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+               <!-- SCRIPTS -->
+               <script src="./js/jquery.js"></script>
+               <script src="./js/bootstrap.min.js"></script>
+               <script src="./js/jquery.parallax.js"></script>
+               <script src="./js/custom.js"></script>
+               <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+          </body>
+
+          </html>
+          

@@ -1,4 +1,4 @@
-let appHeader = `
+let appFooter = `
     <div class="container">
     <div class="row">
 
@@ -28,4 +28,4 @@ let appHeader = `
     </div>
     </div>
 `;
-document.getElementById("app-footer").innerHTML = appHeader;
+document.getElementById("app-footer").innerHTML = appFooter;
