@@ -28,7 +28,7 @@ def formatting(html_path:str):
      
      with open(html_path,  encoding="utf8") as html:
           
-          nb_body = bs(html, 'html.parser').prettify()
+          nb_body = bs(html, 'html.parser').prettify().replace('¶', '')
           title_name = ' '.join(os.path.splitext(os.path.basename(html_path))[0].split()).capitalize().replace('_', ' ')
           subtitle=None
           keywords=None
