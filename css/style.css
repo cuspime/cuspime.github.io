@@ -64,13 +64,14 @@ p {
     letter-spacing: 0.1px;
 }
 
-ul {
+
+/* ul {
     color: #777;
     font-size: 15px;
     font-weight: 300;
     line-height: 26px;
     letter-spacing: 0.1px;
-}
+} */
 
 .btn-success:focus {
     background-color: #000;
@@ -720,6 +721,15 @@ a:focus {
 }
 
 #blog-single-post .blog-post-des {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 22px;
+}
+
+
+/* blog-post-des to newClass */
+
+#blog-single-post .blog-markdown {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 22px;
