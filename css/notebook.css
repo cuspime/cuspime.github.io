@@ -15,6 +15,21 @@
     width: 60%;
 }
 
+.text_cell_render h1 {
+    width: 100%;
+}
+
+.text_cell_render :not(h1) {
+    max-width: 80%;
+}
+
+.text_cell_render p {
+    padding-left: 10%;
+}
+
+.text_cell_render ul {
+    padding-left: 15%;
+}
 
 /* .text_cell_render h1 {
     display: inline-block;
