@@ -1,13 +1,14 @@
-# Creating the HTML file
 import os
 import re
 import markdown
+from markdown.extensions.toc import TocExtension
+
 
 def convert_markdown_to_html(
     source_markdown_file: str,
     background_img_path: str = None,
     subtitle: str = None,
-    update_date = None,
+    update_date=None,
     keywords: list = None,
     table_of_contents=False,
 ):
@@ -34,12 +35,15 @@ def convert_markdown_to_html(
     if table_of_contents:
         temporary_copy_filename = os.path.join(saving_directory, saving_file_name_no_extension + "_temp_copy.md")
         os.system(f"cp {markdown_file} {temporary_copy_filename}")
-        os.system(f"markdown-toc {temporary_copy_filename} --type Github")
         markdown_file = temporary_copy_filename
 
     with open(markdown_file, "r") as md_f:
         md_used_lines = md_f.readlines()[2:]  # remove first line with title in markdown
-        md_html = markdown.markdown("".join(md_used_lines), extensions=["fenced_code", "codehilite"])
+        md_html = markdown.markdown(
+            "".join(md_used_lines),
+            extensions=[TocExtension(baselevel=1, title="Table of Contents"), "fenced_code", "codehilite"],
+            tab_length=4,
+        )
 
     # Start the HTML file
     file_html = open(saving_path, "w")
@@ -63,7 +67,11 @@ def convert_markdown_to_html(
                 </style>
                 """
 
-    _date = f"""<div class="blog-post-format"><span><i class="fa fa-date"></i> {date} </span></div>""" if update_date else ""
+    _date = (
+        f"""<div class="blog-post-format"><span><i class="fa fa-date"></i> {date} </span></div>"""
+        if update_date
+        else ""
+    )
 
     # Adding the input data to the HTML file
     file_html.write(
@@ -158,7 +166,7 @@ def convert_markdown_to_html(
 
                                         {_date}
 
-                                        <div class="blog-post-des">
+                                        <div class="blog-markdown">
                                         {md_html}
                                         </div>
 
@@ -194,12 +202,13 @@ def convert_markdown_to_html(
 
     # Remove temporary copy files
     if table_of_contents:
-        os.system(f"rm {temporary_copy_filename}")
+        print("hi")
+        # os.system(f"rm {temporary_copy_filename}")
 
 
 if __name__ == "__main__":
     # Sources
-    source_markdown_file = r"blog_entries/blog_markdown/sql_queries_order.md"
+    source_markdown_file = r"blog_entries/blog_markdown/tips.md"
     background_img_path = os.path.join(r"../../images/my_pictures/", r"blackboard_PI.jpg")
     subtitle = None
     update_date = None

@@ -145,6 +145,6 @@ def formatting(html_path:str):
 
 
 if __name__ == '__main__':
-     jupyter_notebook_path = 'blog_entries/blog_jupyter_nb/Standard_error_of_the_mean.ipynb'
+     jupyter_notebook_path = 'blog_entries/blog_jupyter_nb/tips.ipynb'
      convert_jupyter_notebook_to_html(jupyter_notebook_path)
      # print('Transforming jupyter notebook')
