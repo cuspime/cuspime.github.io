@@ -15,23 +15,8 @@
     width: 60%;
 }
 
-
-/* .text_cell_render h1 {
-    display: inline-block;
-    max-width: 100%;
-    padding-left: -100px;
-    padding-right: -300px;
-}
-
-.text_cell_render:not(h1) {
-    max-width: 80%;
-    padding-left: 15%;
-    padding-right: 15%;
-} */
-
 .text_cell_render h1 {
     width: 100%;
-    /* Adjust the width as needed */
 }
 
 .text_cell_render :not(h1) {
