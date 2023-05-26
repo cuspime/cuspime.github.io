@@ -3,7 +3,8 @@
 - [Git commands](#git-commands)
     - [Important](#important)
     - [Less important](#less-important)
-    - [Take it back](#take-it-back)
+    - [Take-it-back commands](#take-it-back-commands)
+    - [Pre-commit](#pre-commit)
 - [Python](#python)
     - [Forcing python to reimport a library](#forcing-python-to-reimport-a-library)
 - [Pyspark](#pyspark)
@@ -12,8 +13,9 @@
 - [Plots](#plots)
     - [Gantt](#gantt)
     - [Time Series quick decomposition](#time-series-quick-decomposition)
+    - [Pareto](#pareto)
 - [Maps](#maps)
-
+- [Other resources](#other-resources)
 
 
 
@@ -46,7 +48,7 @@ I think of it as a **notes to self** section of my website.
   * **git diff** shows differences between the branch and the working directory.
   * **git clone URL_of_repo**
 
-## Take it back
+## Take-it-back commands
 
   If we messed something up, we can try and revert the changes:
 
@@ -62,6 +64,67 @@ git checkout origin/master -- <your_file_path>
 git add <your_file_path>
 git commit -m "<your_file_name> updated"
 ```
+
+## Pre-commit
+Arguably, one of the tools that helps the most when coding within a team is to make use of automatic tests and/or quick
+style fixes to our code. A quick example: spotting and fixing `trailing white spaces` manually
+(who has time for that???). The tool to use in this case is [pre-commit](https://pre-commit.com/), which is run when you launch a `git commit` command and prevents you from making a commit or fixes your files if one of your predefined hooks fails.
+
+After installing pre-commit via `pip install pre-commit` you can run 
+```bash
+pre-commit sample-config
+```
+to create a basic first configuration file: `.pre-commit-config.yaml`. This yaml file will consist of a couple of sources (*repo*) with corresponding versions (*rev*) and a series of hooks to be used (*hook* and a list of identifiers *id*).
+The file looks like:
+
+```yaml
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    rev: 22.10.0
+    hooks:
+    -   id: black
+```
+Which you can modify to your convenience. For instance, you may want to run some hooks with specific arguments or explicitly skip a given file for some particular hook:
+
+```yaml
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: check-added-large-files
+        args: ['--maxkb=1024']
+        exclude: "notebooks/some_jupyter_notebook.ipynb, some_data.csv"
+-   repo: https://github.com/psf/black
+    rev: 22.10.0
+    hooks:
+    -   id: black
+        args:['--line-length=100']
+```
+
+Now that you have a yaml you want to work with, you can install the pre-commit hooks:
+```bash
+pre-commit install
+```
+
+Now, even though these hooks are supposed to run right before the commit in an automated way, it is nice to be able to run them directly as a sanity check when you are fixing some of the issues you have:
+```bash
+pre-commit run --all-files
+pre-commit run <ONE_FILE_NAME> # to run hooks on just one specific file
+```
+
+It is very importatn that if one of your files fails to pass one of the hooks you'll need to tell git you want to add the modified version that will now pass the check, otherwise you will never be able to actually commit and push (unless you want to skip the pre-commit hooks verification via `git commit -m <MESSAGE> --no-verify` which is not recommended).
+```bash
+git add <MODIFIED_FILE_NAME>
+git add commit -m <MESSAGE>
+``` 
+
 ---
 
 
@@ -323,5 +386,91 @@ def plot_time_series_decomposition(
 
 ```
 
+## Pareto 
+```python
+def plot_pareto(
+    df: pd.DataFrame, categorical_column: str, value_column: str, threshold_on_value: float = None
+) -> go.Figure:
+    """Plot Pareto's curve and compare to the usual 80/20 principle
+
+    Args:
+        df (pd.DataFrame): dataframe with at least a categorical and a value column
+        categorical_column (str): name of the categorical column to consider.
+        value_column (str): name of the values column
+        threshold_on_value (float, optional): cutoff at which categorical entities will be grouped under a unique group.
+            If None, all elements are shown independently. Defaults to None.
+
+    Returns:
+        go.Figure: Pareto plot
+    """
+
+    df["n_elements"] = 1
+    df["elem_group"] = df.apply(
+        lambda x: x[categorical_column] if x[value_column] > threshold_on_value else "below_threshold", axis=1
+    )
+
+    df_grouped = df.groupby("elem_group").agg({value_column: "sum", "n_elements": "sum"}).reset_index()
+    df_grouped = df_grouped.sort_values(by=value_column, ascending=False)
+
+    is_below_thr = df_grouped["elem_group"] == "below_threshold"
+    df_grouped = pd.concat([df_grouped[~is_below_thr], df_grouped[is_below_thr]])
+
+    df_grouped["cumulative_pct_val"] = 100 * df_grouped[value_column].cumsum() / df_grouped[value_column].sum()
+    df_grouped["cat_order_per_value"] = df_grouped["n_elements"].cumsum()
+    df_grouped["cum_pct_categories"] = 100 * df_grouped["cat_order_per_value"] / df_grouped["n_elements"].sum()
+
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_grouped["cum_pct_categories"],
+            y=df_grouped["cumulative_pct_val"],
+            name=f"cumulative % of {value_column}",
+            mode="lines+markers",
+            marker_color="rgba(255,0,0,.5)",
+            customdata=df_grouped[["elem_group", "n_elements", value_column]],
+            hovertemplate="<br>".join(
+                [
+                    "<b>%{y:0.2f}</b>",
+                    "Element: <b>%{customdata[0]}</b>",
+                    "Value: <b>%{customdata[2]:,}</b>",
+                    "Cumulative % categories: <b>%{x}</b>",
+                    
+                    "n_elements: <b>%{customdata[1]}</b>",
+                ]
+            ),
+        ),
+        secondary_y=True,
+    )
+
+    fig.add_trace(
+        go.Bar(
+            x=df_grouped["cum_pct_categories"],
+            y=df_grouped[value_column],
+            name=value_column,
+            marker=dict(color="rgba(0,0,255,.5)"),
+        )
+    )
+
+    fig.add_hline(y=80, line=dict(color="rgba(0,0,0,.3)", dash="dash"), secondary_y=True)
+    fig.add_vline(x=20, line=dict(color="rgba(0,0,0,.3)", dash="dash"))
+
+    fig.update_layout(
+        hovermode="x unified", title=f"Pareto chart of {value_column} per {categorical_column}", height=600, width=1600
+    )
+    return fig
+```
+
+---
+
 # Maps
 
+---
+
+# Other resources
+There's a plethora of tips, guidelines and tutorials about MLOps, Data Science, Visualizations and Analysis out there.
+Some of my personal favourites are:
+* [MadeWithML by Goku Mohandas](https://madewithml.com/)
+* [Kuhyen Tran's tips](https://khuyentran1401.github.io/reproducible-data-science/README.html)
+* [Geographic Data Science by Sergio Rey, Dani Arribas and Levi Wolf](https://geographicdata.science/book/intro.html)
+* [Python Data Science Handbook by Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/)

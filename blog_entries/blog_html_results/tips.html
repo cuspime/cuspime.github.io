@@ -7,7 +7,7 @@
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible">
                 <meta name="description" content="None">
-                <meta name="keywords" content="sql, tips">
+                <meta name="keywords" content="tips, git, sql, python">
                 <meta name="author" content="Leopoldo Cuspinera">
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
                 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -107,7 +107,8 @@
 <li><a href="#git-commands">Git commands</a><ul>
 <li><a href="#important">Important</a></li>
 <li><a href="#less-important">Less important</a></li>
-<li><a href="#take-it-back">Take it back</a></li>
+<li><a href="#take-it-back-commands">Take-it-back commands</a></li>
+<li><a href="#pre-commit">Pre-commit</a></li>
 </ul>
 </li>
 <li><a href="#python">Python</a><ul>
@@ -122,9 +123,11 @@
 <li><a href="#plots">Plots</a><ul>
 <li><a href="#gantt">Gantt</a></li>
 <li><a href="#time-series-quick-decomposition">Time Series quick decomposition</a></li>
+<li><a href="#pareto">Pareto</a></li>
 </ul>
 </li>
 <li><a href="#maps">Maps</a></li>
+<li><a href="#other-resources">Other resources</a></li>
 </ul>
 <h1 id="description">Description</h1>
 <p>This is a blog entry that I will use to share some things I have found to be useful but that do not really require a lengthy specified blog entry.</p>
@@ -151,7 +154,7 @@
 <li><strong>git diff</strong> shows differences between the branch and the working directory.</li>
 <li><strong>git clone URL_of_repo</strong></li>
 </ul>
-<h2 id="take-it-back">Take it back</h2>
+<h2 id="take-it-back-commands">Take-it-back commands</h2>
 <p>If we messed something up, we can try and revert the changes:</p>
 <ul>
 <li><strong>git revert commit_key</strong> undoes all the changes made in commit and applies it to the current branch</li>
@@ -164,6 +167,59 @@
 git checkout origin/master -- &lt;your_file_path&gt;
 git add &lt;your_file_path&gt;
 git commit -m <span class="s2">&quot;&lt;your_file_name&gt; updated&quot;</span>
+</code></pre></div>
+
+<h2 id="pre-commit">Pre-commit</h2>
+<p>Arguably, one of the tools that helps the most when coding within a team is to make use of automatic tests and/or quick
+style fixes to our code. A quick example: spotting and fixing <code>trailing white spaces</code> manually
+(who has time for that???). The tool to use in this case is <a href="https://pre-commit.com/">pre-commit</a>, which is run when you launch a <code>git commit</code> command and prevents you from making a commit or fixes your files if one of your predefined hooks fails.</p>
+<p>After installing pre-commit via <code>pip install pre-commit</code> you can run </p>
+<div class="codehilite"><pre><span></span><code>pre-commit sample-config
+</code></pre></div>
+
+<p>to create a basic first configuration file: <code>.pre-commit-config.yaml</code>. This yaml file will consist of a couple of sources (<em>repo</em>) with corresponding versions (<em>rev</em>) and a series of hooks to be used (<em>hook</em> and a list of identifiers <em>id</em>).
+The file looks like:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">repos</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/pre-commit/pre-commit-hooks</span><span class="w"></span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-yaml</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end-of-file-fixer</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trailing-whitespace</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/psf/black</span><span class="w"></span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22.10.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">black</span><span class="w"></span>
+</code></pre></div>
+
+<p>Which you can modify to your convenience. For instance, you may want to run some hooks with specific arguments or explicitly skip a given file for some particular hook:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">repos</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/pre-commit/pre-commit-hooks</span><span class="w"></span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trailing-whitespace</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check-added-large-files</span><span class="w"></span>
+<span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;--maxkb=1024&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">        </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;notebooks/some_jupyter_notebook.ipynb,</span><span class="nv"> </span><span class="s">some_data.csv&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/psf/black</span><span class="w"></span>
+<span class="w">    </span><span class="nt">rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22.10.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">black</span><span class="w"></span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">args:[&#39;--line-length=100&#39;]</span><span class="w"></span>
+</code></pre></div>
+
+<p>Now that you have a yaml you want to work with, you can install the pre-commit hooks:</p>
+<div class="codehilite"><pre><span></span><code>pre-commit install
+</code></pre></div>
+
+<p>Now, even though these hooks are supposed to run right before the commit in an automated way, it is nice to be able to run them directly as a sanity check when you are fixing some of the issues you have:</p>
+<div class="codehilite"><pre><span></span><code>pre-commit run --all-files
+pre-commit run &lt;ONE_FILE_NAME&gt; <span class="c1"># to run hooks on just one specific file</span>
+</code></pre></div>
+
+<p>It is very importatn that if one of your files fails to pass one of the hooks you'll need to tell git you want to add the modified version that will now pass the check, otherwise you will never be able to actually commit and push (unless you want to skip the pre-commit hooks verification via <code>git commit -m &lt;MESSAGE&gt; --no-verify</code> which is not recommended).</p>
+<div class="codehilite"><pre><span></span><code>git add &lt;MODIFIED_FILE_NAME&gt;
+git add commit -m &lt;MESSAGE&gt;
 </code></pre></div>
 
 <hr />
@@ -411,7 +467,90 @@ Saving the python file you're working on and rerunning the jupyter cell containi
     <span class="k">return</span> <span class="kc">None</span>
 </code></pre></div>
 
+<h2 id="pareto">Pareto</h2>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_pareto</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">categorical_column</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value_column</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">threshold_on_value</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Plot Pareto&#39;s curve and compare to the usual 80/20 principle</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df (pd.DataFrame): dataframe with at least a categorical and a value column</span>
+<span class="sd">        categorical_column (str): name of the categorical column to consider.</span>
+<span class="sd">        value_column (str): name of the values column</span>
+<span class="sd">        threshold_on_value (float, optional): cutoff at which categorical entities will be grouped under a unique group.</span>
+<span class="sd">            If None, all elements are shown independently. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        go.Figure: Pareto plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;n_elements&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;elem_group&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="n">categorical_column</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">value_column</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">threshold_on_value</span> <span class="k">else</span> <span class="s2">&quot;below_threshold&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;elem_group&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="n">value_column</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;n_elements&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">value_column</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">is_below_thr</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;elem_group&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;below_threshold&quot;</span>
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_grouped</span><span class="p">[</span><span class="o">~</span><span class="n">is_below_thr</span><span class="p">],</span> <span class="n">df_grouped</span><span class="p">[</span><span class="n">is_below_thr</span><span class="p">]])</span>
+
+    <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cumulative_pct_val&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">df_grouped</span><span class="p">[</span><span class="n">value_column</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">/</span> <span class="n">df_grouped</span><span class="p">[</span><span class="n">value_column</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cat_order_per_value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;n_elements&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+    <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cum_pct_categories&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cat_order_per_value&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;n_elements&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s2">&quot;secondary_y&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}]])</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cum_pct_categories&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cumulative_pct_val&quot;</span><span class="p">],</span>
+            <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;cumulative % of </span><span class="si">{</span><span class="n">value_column</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines+markers&quot;</span><span class="p">,</span>
+            <span class="n">marker_color</span><span class="o">=</span><span class="s2">&quot;rgba(255,0,0,.5)&quot;</span><span class="p">,</span>
+            <span class="n">customdata</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[[</span><span class="s2">&quot;elem_group&quot;</span><span class="p">,</span> <span class="s2">&quot;n_elements&quot;</span><span class="p">,</span> <span class="n">value_column</span><span class="p">]],</span>
+            <span class="n">hovertemplate</span><span class="o">=</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="p">[</span>
+                    <span class="s2">&quot;&lt;b&gt;%</span><span class="si">{y:0.2f}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Element: &lt;b&gt;%</span><span class="si">{customdata[0]}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Value: &lt;b&gt;%</span><span class="si">{customdata[2]:,}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Cumulative </span><span class="si">% c</span><span class="s2">ategories: &lt;b&gt;%</span><span class="si">{x}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+
+                    <span class="s2">&quot;n_elements: &lt;b&gt;%</span><span class="si">{customdata[1]}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                <span class="p">]</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+        <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cum_pct_categories&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="n">value_column</span><span class="p">],</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">value_column</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;rgba(0,0,255,.5)&quot;</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;rgba(0,0,0,.3)&quot;</span><span class="p">,</span> <span class="n">dash</span><span class="o">=</span><span class="s2">&quot;dash&quot;</span><span class="p">),</span> <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_vline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;rgba(0,0,0,.3)&quot;</span><span class="p">,</span> <span class="n">dash</span><span class="o">=</span><span class="s2">&quot;dash&quot;</span><span class="p">))</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+        <span class="n">hovermode</span><span class="o">=</span><span class="s2">&quot;x unified&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Pareto chart of </span><span class="si">{</span><span class="n">value_column</span><span class="si">}</span><span class="s2"> per </span><span class="si">{</span><span class="n">categorical_column</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1600</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">fig</span>
+</code></pre></div>
+
+<hr />
 <h1 id="maps">Maps</h1>
+<hr />
+<h1 id="other-resources">Other resources</h1>
+<p>There's a plethora of tips, guidelines and tutorials about MLOps, Data Science, Visualizations and Analysis out there.
+Some of my personal favourites are:
+* <a href="https://madewithml.com/">MadeWithML by Goku Mohandas</a>
+* <a href="https://khuyentran1401.github.io/reproducible-data-science/README.html">Kuhyen Tran's tips</a>
+* <a href="https://geographicdata.science/book/intro.html">Geographic Data Science by Sergio Rey, Dani Arribas and Levi Wolf</a>
+* <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook by Jake VanderPlas</a></p>
                                         </div>
 
                                    </div>
