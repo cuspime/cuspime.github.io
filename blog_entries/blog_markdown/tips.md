@@ -215,6 +215,38 @@ def flatten_df(nested_df):
     return flat_df
 ```
 
+## Normalising units
+```python
+def normalise_units(column: str):
+    """Normalises the units given by removing well-known prefixes
+
+    Args:
+        column (str): name of the column with the values and units mixed
+
+    Returns:
+        pyspark.sql.column.Column: column with value for measure without prefixes.
+
+    Example:
+        285.3km -> 285300
+        500.1Mm -> 500100000 
+    """
+    units_col = F.split(column, "[0-9.]+")[1]
+    result = (
+        (
+            F.when(units_col.rlike("^k\w"), F.lit(1e3))
+            .when(units_col.rlike("^M\w"), F.lit(1e6))
+            .when(units_col.rlike("^G\w"), F.lit(1e9))
+            .when(units_col.rlike("^c\w"), F.lit(1e-2))
+            .when(units_col.rlike("^m\w"), F.lit(1e-3))
+            .when(units_col.rlike("^n\w"), F.lit(1e-9))
+            .otherwise(F.lit(1)) 
+        )
+        * F.cast("float", F.split("outfeed_voltage", "[a-zA-Z]+")[0])
+    )
+
+    return result
+
+```
 
 ---
 
