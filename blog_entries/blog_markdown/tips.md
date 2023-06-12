@@ -10,9 +10,11 @@
 - [Pyspark](#pyspark)
     - [Time sliding windows](#time-sliding-windows)
     - [Flattening nested dataframes](#flattening-nested-dataframes)
+    - [Normalising units](#normalising-units)
 - [Plots](#plots)
     - [Gantt](#gantt)
     - [Time Series quick decomposition](#time-series-quick-decomposition)
+    - [Time Series quick decomposition](#time-series-quick-decomposition-1)
     - [Pareto](#pareto)
 - [Maps](#maps)
 - [Other resources](#other-resources)
@@ -25,6 +27,7 @@ This is a blog entry that I will use to share some things I have found to be use
 I think of it as a **notes to self** section of my website.
 
 ---
+
 
 # Git commands
   Many of these commands can be found [in this website](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
@@ -142,6 +145,8 @@ from X import (f, g, h)
 
 reload(X)
 ```
+
+---
 
 ---
 
@@ -275,10 +280,24 @@ def gantt_chart(
     Returns:
         plt.Figure: Gantt plot
     """
+    """Gantt plot that shows where each individual task starts and ends.
+    Each task can have multiple time intervals
+
+    Args:
+        df (pd.DataFrame): pandas dataframe with 
+        tasks_column (str): name of the column containing categorical data
+        initial_time_column (str): start time of task interval
+        end_time_column (str): end time of task interval
+        color_dict (dict, optional): colors assigned to each task interval. Defaults to None.
+
+    Returns:
+        plt.Figure: Gantt plot
+    """
     if color_dict:
         cd = color_dict
     else:
         cd = {}
+        for i in df[tasks_column].unique():
         for i in df[tasks_column].unique():
             cd[i] = "#" + "".join([np.random.choice([i for i in set("0123456789ABCDEF")]) for j in range(6)])
 
@@ -300,6 +319,121 @@ def gantt_chart(
     plt.show()
 
     return fig
+```
+
+## Time Series quick decomposition
+Hopefullly a time saver when we just want to see quickly some characteristics of a time series.
+```python
+import pandas as pd
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.graphics.tsaplots import plot_acf
+from plotly.subplots import make_subplots
+
+
+def plot_time_series_decomposition(
+    df: pd.DataFrame,
+    value_column: str,
+    time_column: str,
+    model: str = "multiplicative",
+    show_autocorrelation_plot: bool = True,
+    lags_for_acf: int = 365 * 2,
+):
+    """
+    Show the time series decomposition of a time series pandas dataframe
+
+    Args:
+        df (pd.DataFrame): pandas dataframe to try and extract seasonalities.
+        value_column (str): name of the column with the values to analyse
+        time_column (str): name of the column used to extract seasonalities and trends.
+        model (str):       one of 'additive' or 'multiplicative'. Default is 'multiplicative'
+        show_autocorrelation_plot (bool): True if an autocorrelation plot wants to be displayed. Default is True
+        lags_for_acf (int): number of lags to consider in the autocorrelation plot. Default is 365 * 2
+
+    Returns:
+        None
+    """
+    data_orig = df[[time_column, value_column]].copy()
+    data_orig.set_index(pd.DatetimeIndex(df[time_column], freq="D"), inplace=True)
+    analysis = data_orig[value_column]
+
+    decompose_result_mult = seasonal_decompose(analysis, model=model)
+    trend = decompose_result_mult.trend
+    seasonal = decompose_result_mult.seasonal
+    residual = decompose_result_mult.resid
+
+    fig = make_subplots(
+        rows=3,
+        cols=1,
+        vertical_spacing=0.05,
+        horizontal_spacing=0.15,
+        row_heights=[0.6, 0.2, 0.2],
+        subplot_titles=(["Original set and Trend", "Seasonal", "Residual"]),
+        shared_xaxes=True,
+        specs=[[{}], [{}], [{"secondary_y": True}]],
+    )
+
+    # Original
+    fig.add_trace(
+        go.Scattergl(
+            x=df[time_column],
+            y=df[value_column],
+            name="Original",
+            line_color="rgba(30,125,245,.5)",
+            mode="markers",
+        ),
+        col=1,
+        row=1,
+    )
+
+    # Trend
+    fig.add_trace(
+        go.Scattergl(
+            x=analysis.index,
+            y=trend,
+            name="Trend",
+            line_color="black",
+            mode="lines",
+        ),
+        col=1,
+        row=1,
+    )
+
+    # Seasonal
+    fig.add_trace(
+        go.Scattergl(
+            x=analysis.index,
+            y=seasonal,
+            name="Seasonal",
+            line_color="black",
+            mode="lines",
+        ),
+        col=1,
+        row=2,
+    )
+
+    # Residual
+    fig.add_trace(
+        go.Scattergl(
+            x=analysis.index,
+            y=residual,
+            name="Residual",
+            line_color="black",
+            mode="lines",
+        ),
+        col=1,
+        row=3,
+        secondary_y=False,
+    )
+
+    fig.update_layout(height=800, width=1400)
+    if show_autocorrelation_plot:
+        my_dpi = 96
+        fig_plt, ax = plt.subplots(figsize=(1400 / my_dpi, 200 / my_dpi), dpi=my_dpi)
+        plot_acf(analysis, lags=lags_for_acf, ax=ax)
+        fig_plt.show()
+    fig.show()
+
+    return None
 ```
 
 ## Time Series quick decomposition

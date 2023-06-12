@@ -202,6 +202,7 @@ def convert_markdown_to_html(
 
     # Remove temporary copy files
     if table_of_contents:
+        print("hi")
         # os.system(f"rm {temporary_copy_filename}")
 
 
