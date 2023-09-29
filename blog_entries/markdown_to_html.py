@@ -212,7 +212,7 @@ if __name__ == "__main__":
     background_img_path = os.path.join(r"../../images/my_pictures/", r"blackboard_PI.jpg")
     subtitle = None
     update_date = None
-    keywords = ["sql", "tips"]
+    keywords = ["tips", "git", 'sql', 'python']
 
     convert_markdown_to_html(
         source_markdown_file, background_img_path, subtitle=subtitle, keywords=keywords, table_of_contents=True
