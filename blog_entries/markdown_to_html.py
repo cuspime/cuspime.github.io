@@ -208,11 +208,11 @@ def convert_markdown_to_html(
 
 if __name__ == "__main__":
     # Sources
-    source_markdown_file = r"blog_entries/blog_markdown/tips.md"
+    source_markdown_file = r"blog_entries/blog_markdown/electrical_network_mexico.md"
     background_img_path = os.path.join(r"../../images/my_pictures/", r"blackboard_PI.jpg")
     subtitle = None
     update_date = None
-    keywords = ["tips", "git", 'sql', 'python']
+    keywords = ['python', 'neo4j', 'maps']
 
     convert_markdown_to_html(
         source_markdown_file, background_img_path, subtitle=subtitle, keywords=keywords, table_of_contents=True

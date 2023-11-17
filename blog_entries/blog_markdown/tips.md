@@ -5,8 +5,12 @@
     - [Less important](#less-important)
     - [Take-it-back commands](#take-it-back-commands)
     - [Pre-commit](#pre-commit)
+- [Bash](#bash)
+    - [Read only specific lines of a .csv](#read-only-specific-lines-of-a-csv)
 - [Python](#python)
     - [Forcing python to reimport a library](#forcing-python-to-reimport-a-library)
+- [Pandas](#pandas)
+    - [SQL-like window functions](#sql-like-window-functions)
 - [Pyspark](#pyspark)
     - [Time sliding windows](#time-sliding-windows)
     - [Flattening nested dataframes](#flattening-nested-dataframes)
@@ -130,6 +134,18 @@ git add commit -m <MESSAGE>
 
 ---
 
+# Bash
+## Read only specific lines of a .csv
+Sometimes when importing data to pandas or reading from a `.csv` file one may encounter issues with the imported data.
+To be able to understand the reason behind such an issue you sometimes need to see the data directly to then be able to modify it.
+Here is one command that does such a thing:
+```bash
+filename="path_to_csv_file.csv"
+cat -n "$filename" | head -n 275211 | tail -n 3
+```
+
+---
+
 
 # Python
 ## Forcing python to reimport a library
@@ -147,6 +163,18 @@ reload(X)
 ```
 
 ---
+
+# Pandas
+
+## SQL-like window functions
+In SQL, windows can be used when one attempts to gather data from subgroups of a given column for several rows already when defining a column. 
+Pandas is slightly different in that any function stems from the **.groupby** method.
+[This website](https://engineeringfordatascience.com/posts/sql_like_window_functions_in_pandas/) explains quite clearly how to make use of SQL-like window functions in pandas.
+
+```python
+df['n_rows_same_column_value'] = df.groupby('column_to_check')['other_column_to_count'].transform('count')
+```
+
 
 ---
 
