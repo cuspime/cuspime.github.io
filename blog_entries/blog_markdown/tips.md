@@ -175,7 +175,6 @@ Pandas is slightly different in that any function stems from the **.groupby** me
 df['n_rows_same_column_value'] = df.groupby('column_to_check')['other_column_to_count'].transform('count')
 ```
 
-
 ---
 
 # Pyspark
@@ -578,6 +577,81 @@ def plot_time_series_decomposition(
 
     return None
 
+```
+
+## Pareto 
+```python
+def plot_pareto(
+    df: pd.DataFrame, categorical_column: str, value_column: str, threshold_on_value: float = None
+) -> go.Figure:
+    """Plot Pareto's curve and compare to the usual 80/20 principle
+
+    Args:
+        df (pd.DataFrame): dataframe with at least a categorical and a value column
+        categorical_column (str): name of the categorical column to consider.
+        value_column (str): name of the values column
+        threshold_on_value (float, optional): cutoff at which categorical entities will be grouped under a unique group.
+            If None, all elements are shown independently. Defaults to None.
+
+    Returns:
+        go.Figure: Pareto plot
+    """
+
+    df["n_elements"] = 1
+    df["elem_group"] = df.apply(
+        lambda x: x[categorical_column] if x[value_column] > threshold_on_value else "below_threshold", axis=1
+    )
+
+    df_grouped = df.groupby("elem_group").agg({value_column: "sum", "n_elements": "sum"}).reset_index()
+    df_grouped = df_grouped.sort_values(by=value_column, ascending=False)
+
+    is_below_thr = df_grouped["elem_group"] == "below_threshold"
+    df_grouped = pd.concat([df_grouped[~is_below_thr], df_grouped[is_below_thr]])
+
+    df_grouped["cumulative_pct_val"] = 100 * df_grouped[value_column].cumsum() / df_grouped[value_column].sum()
+    df_grouped["cat_order_per_value"] = df_grouped["n_elements"].cumsum()
+    df_grouped["cum_pct_categories"] = 100 * df_grouped["cat_order_per_value"] / df_grouped["n_elements"].sum()
+
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_grouped["cum_pct_categories"],
+            y=df_grouped["cumulative_pct_val"],
+            name=f"cumulative % of {value_column}",
+            mode="lines+markers",
+            marker_color="rgba(255,0,0,.5)",
+            customdata=df_grouped[["elem_group", "n_elements", value_column]],
+            hovertemplate="<br>".join(
+                [
+                    "<b>%{y:0.2f}</b>",
+                    "Element: <b>%{customdata[0]}</b>",
+                    "Value: <b>%{customdata[2]:,}</b>",
+                    "Cumulative % categories: <b>%{x}</b>",
+                    
+                    "n_elements: <b>%{customdata[1]}</b>",
+                ]
+            ),
+        ),
+        secondary_y=True,
+    )
+
+    fig.add_trace(
+        go.Bar(
+            x=df_grouped["cum_pct_categories"],
+            y=df_grouped[value_column],
+            name=value_column,
+            marker=dict(color="rgba(0,0,255,.5)"),
+        )
+    )
+
+    fig.add_hline(y=80, line=dict(color="rgba(0,0,0,.3)", dash="dash"), secondary_y=True)
+    fig.add_vline(x=20, line=dict(color="rgba(0,0,0,.3)", dash="dash"))
+
+    fig.update_layout(
+        hovermode="x unified", title=f"Pareto chart of {value_column} per {categorical_column}", height=600, width=1600
+    )
+    return fig
 ```
 
 ## Pareto 
