@@ -1,0 +1,312 @@
+% -------------------------
+% Resume in Latex
+% Author : Leopoldo Cuspinera
+% OrignalTemplateAuthor : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\usepackage{ragged2e}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+% \usepackage{tgpagella} %Nice font for name
+%\usepackage{fontspec}
+
+\usepackage{xcolor}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+% ----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \hspace{4.9cm}  \href{https://cuspime.github.io/}  {%\fontfamily{Accanthis ADF STd}\selectfont
+  \Huge
+   \textbf{ {\color[rgb]{.2,.3,.7}  Leopoldo}  {\color[rgb]{.23,.27,.33} Cuspinera} } } \\ \vspace{.1cm}
+\end{tabular*}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+LinkedIn: \href{https://www.linkedin.com/in/leocuspinera}{\textbf{leocuspinera}} 
+  ~&  Email: \href{mailto:leocuspinera@gmail.com}{\textbf{leocuspinera@gmail.com}}
+\\
+Github: \href{https://github.com/cuspime}{~~\,\textbf{cuspime}}
+  &  Mobile: +39-351-656-2453\\
+  Tableau: \href{https://public.tableau.com/profile/leocuspinera#!/}{~\textbf{leocuspinera}}
+\end{tabular*}
+\vspace{-.3cm}
+%-----------Summary---------------
+\section{Summary}
+\justify{
+  Highly-trained and motivated Data Scientist with a PhD in Physics and proven experience in analysing and forecasting the behaviour of complex systems whilst sharing findings with a wide range of audiences, from stakeholders to technicians through interactive, dynamical dashboards.
+}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Durham University}{Durham, England}
+      {PhD in Physics}{Oct 2015 -- Jan 2020}
+    \resumeSubheading
+      {Durham University}{Durham, England}
+      {MSc in Strings Particles and Cosmology. \textbf{Honours}: Distinction}
+      {Oct 2014 -- Sep 2015}
+      
+    \resumeSubheading
+      {Benemerita Universidad Autonoma de Puebla}{Puebla, Mexico}
+      {BSc. in Physics}{Aug 2009 -- Jun 2014}
+  \resumeSubHeadingListEnd
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Camlin Group}{Remote, Italy}
+      {Data Scientist}{Jun 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Neo4J}
+        {
+            Responsible of using neo4j to leverage customer-provided physical connections, analyse electrical network supply and building of knowledge graphs.
+            Used graph and ML algorithms to address issues such as prediction of missing data, optimal network traversal and load tracking which
+            enables us to run what-if scenarios for predictive maintenance and phase balancing optimization, which enhances network performance.
+        }
+        \resumeItem{Python, Spark, Databricks}
+        {
+          Analysis and profiling of transmission lines based on load consumption in UK's electrical grid at low voltages.
+          Design and development of models that forecast electrical faults through time series analysis, signal processing and different ML algorithms.
+          Provision of advice to Distribution Network Operators in prioritising correctly the required maintenance to reduce the economical impact faulty services may cause.
+        }
+        \resumeItem{Tableau}{Creation of Stories and Dashboards that summarise convoluted information about the historical state of the network thus giving visibility of the network to stakeholders and providing a starting point for quick investigations.}
+	 \resumeItemListEnd
+
+    \resumeSubheading
+      {Esosphera S.R.L.}{Treviso, Italy}
+      {Data Scientist}{Sep 2020 - Jun 2021}
+      \resumeItemListStart
+        \resumeItem{Python}
+        {Created ETL pipelines that queried different tables of the main database via Postgres, created features with pandas, updated the curated data on S3 buckets and made use of Athena to feed the Tableau workbooks I developed.}	
+	 \resumeItem{Tableau}
+         {
+           Created several interactive Dashboards that allowed both salesmen and clients in undertanding the most impactful interactions between the end users and our customers.
+           }
+	 \resumeItemListEnd
+	 
+    \resumeSubheading
+      {Perimeter Institute}{Waterloo, Canada}
+      {Visiting Researcher}{Jan 2016 - Mar 2019}
+      \resumeItemListStart
+        \resumeItem{Mathematica, Python}
+          {Made extensive use of both Mathematica and Python to solve the Partial Differential Equations that describe vacuum decays around higher dimensional black holes.
+          Worked in an international collaboration that had as a result two of the papers I published during my PhD. }
+        \resumeItem{Guest speaker}
+          {Gave a seminar explaining the calculations we made to obtain the results of our work.}
+      \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+   
+    \resumeSubheading
+      {Durham University}{Durham, England}
+      {Teaching Assistant}{Oct 2015 - Nov 2019}
+      \resumeItemListStart
+        \resumeItem{Maths and stats lab}
+          {guided students with different academic backgrounds in finding their own answers to mathematical and statistical problems.
+Due to the positive impact our team had on the students, we obtained the 'Student employee of the year (2019)' award.}
+        \resumeItem{Tutor}
+          {Helped students in understanding concepts 
+          in Quantum Mechanics, Linear Algebra, Statistics and Calculus}
+      \resumeItemListEnd
+\vspace{-.35cm}
+    \resumeSubheading
+      {Deutsches Elektronen-Synchrotron}{Hamburg, Germany}
+      {Internship}{Jun 2014 - Sep 2014}
+      \resumeItemListStart
+        \resumeItem{C++}
+        {Studied the predictions of different Monte Carlo simulators on diffractive dissociations of proton-proton collisions and compared with real data measured at LHC.
+          This was my first time being exposed to C++, which demonstrates I can quickly pick up a programming language, develop a project and provide results in short time.
+        }
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+
+%-------- SKILLS------------
+\section{Skills}
+  \resumeSubHeadingListStart
+	\item{    
+            \textbf{Technologies}{
+              \begin{itemize}
+              \item \textbf{Comfortable:} Python,  SQL, Git, Pandas, Spark, Scikit-learn, Tensorflow,  Keras, Tableau, Bokeh, Seaborn, Mathematica, LaTeX.
+              \item \textbf{Familiar:} AWS (through boto3), C++, Excel,  Bash.
+              \end{itemize}
+      }
+     } 
+     \item{ \textbf{Professional:} {Mathematical modelling, Time Series,  Linear Algebra, Machine Learning, SVM, KNN, Random Forests, NN, CNN, ARIMA, pattern identification, quantitative analysis, public speaking, self-training, research.}
+     }
+     \item{
+    \textbf{Languages}{: English, Spanish, Italian.}}
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE} }    
+  \resumeSubHeadingListEnd
+
+
+
+%--------------PUBLICATIONS-----------------
+
+  \section{\href{http://inspirehep.net/author/profile/L.Cuspinera.1?ln=it}{Publications} }
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{http://inspirehep.net/record/1776158}
+      		{Black holes, vacuum decay and thermodynamics}}{}
+      {PhD thesis }{Jan 2020}
+%      \resumeItemListStart
+%      \resumeItem{LaTeX, Emacs}
+%        %Even though this thesis largely
+%        {This thesis conveys previous results from the publications of the research groups I was part of during my PhD. In this work I explained clearly each step of the calculations and the ideas involved. I also displayed new information about the studied topics and posed new questions for future research.
+%    }
+%    \resumeItemListEnd
+
+% ---------------   
+    \resumeSubheading
+      {\href{http://inspirehep.net/record/1767690}{Are Superentropic black holes superentropic?}}{}
+      {Journal of High Energy Physics}{Nov 2019}
+%      \resumeItemListStart
+%      \resumeItem{Mathematica}{For this project I modelled the ``shape'' of the higher dimensional black holes studied, analysed their valid thermodynamic parameter space and designed 3D images that helped understanding the limits of such space.
+%      More importantly, through assertive communication I leaded the progress of this project, which motivated fruitful contributions from most of the collaborators and as a result, the swift publication of our findings.}
+%      \resumeItemListEnd
+
+% ---------------
+      
+    \resumeSubheading
+      {\href{https://doi.org/10.1142/S0218271820500054}{Higgs vacuum decay in a braneworld}}{}
+      {International Journal of Modern Physics D}{Nov 2019}
+%      \resumeItemListStart
+%       \resumeItem{Python}
+%       {Solved the Equations of Motion describing thin and thick-wall instantons within a Randall-Sundrum braneworld model.}
+%       \resumeItem{Mathematica}{Verified the solutions found in Python and calculated the brane profile.}
+%      \resumeItemListEnd
+            
+% ---------------
+      
+    \resumeSubheading {\href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.99.024046}{Higgs Vacuum Decay from Particle collisions?}}{}
+      {Physical Review D}{Jan 2019}
+%      \resumeItemListStart
+%       \resumeItem{Mathematica}
+%       {Applied numerical methods to solve Partial Differential Equations describing vacuum decay around higher dimensional, small black holes.
+%         Found out a way of depicting the brane-black hole system, which lead to assimilate intrincated information through simple and helpful images of higher dimensional entities.}
+%       \resumeItem{Python}
+%       {Verification of the numerical methods developed in Mathematica.}
+%          \resumeItemListEnd     
+
+  \resumeSubHeadingListEnd
+
+
+
+
+
+%----------------PROJECTS-----------------
+  \section{\href{https://github.com/cuspime/Projects}{Projects} }
+ \small{ \href{https://github.com/cuspime/Projects}{For a more comprehensive list, please visit my \textbf{github profile}}.}
+  \resumeSubHeadingListStart
+    
+    \resumeSubItem{\href{https://github.com/cuspime/Projects/blob/master/ChestXRays.ipynb}{Pneumonia detection with a CNN}}
+    {In this project I show how to create a Convolutional Neural Network that can correctly predict if a patient suffers from pneumonia with an accuracy of 88.94\% and an F1-score of 0.9139.}
+    \\~\\  
+    
+    \resumeSubItem{\href{https://public.tableau.com/views/COVID_15919263646180/COVIDDashboard?:language=en-GB\&:display_count=y\&publish=yes\&:origin=viz_share_link}{COVID-19 Dashboard}}
+    {This Tableau Dashboard shows a detailed and interactive Exploratory Data Analysis, which can display new and total confirmed cases, recoveries and deaths for any country reporting its casualties to the WHO, gathered by the John Hopkins University. The dashboard can also show this information for every $10^6$ inhabitants.}
+     \\~\\ 
+     
+     \resumeSubItem{\href{https://public.tableau.com/profile/leocuspinera\#\!/vizhome/Twitter_15978796836980/Main_Story}{Twitter analysis}}
+    {For some time binational couples were not allowed to reunite with their essential ones. On Twitter people united under the \textbf{\#LoveIsNotTourism} hashtag which, in the end, did make enough pressure to promote a change. This highly interactive dashboard taks a closer look at the behaviour of this movement in the interval I was most involved and makes an interesting sentiment analysis as well as detecting the most influential users.}
+    
+  \resumeSubHeadingListEnd
+
+%
+
+%-------------------------------------------
+\end{document}
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End: 
