@@ -7,7 +7,7 @@
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible">
                 <meta name="description" content="None">
-                <meta name="keywords" content="tips, git, sql, python">
+                <meta name="keywords" content="python, maps, tips, terminal, bash, spark, viz, plot, git">
                 <meta name="author" content="Leopoldo Cuspinera">
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
                 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -111,8 +111,17 @@
 <li><a href="#pre-commit">Pre-commit</a></li>
 </ul>
 </li>
+<li><a href="#bash">Bash</a><ul>
+<li><a href="#starship">Starship</a></li>
+<li><a href="#read-only-specific-lines-of-a-csv">Read only specific lines of a .csv</a></li>
+</ul>
+</li>
 <li><a href="#python">Python</a><ul>
 <li><a href="#forcing-python-to-reimport-a-library">Forcing python to reimport a library</a></li>
+</ul>
+</li>
+<li><a href="#pandas">Pandas</a><ul>
+<li><a href="#sql-like-window-functions">SQL-like window functions</a></li>
 </ul>
 </li>
 <li><a href="#pyspark">Pyspark</a><ul>
@@ -126,6 +135,7 @@
 <li><a href="#time-series-quick-decomposition">Time Series quick decomposition</a></li>
 <li><a href="#time-series-quick-decomposition-1">Time Series quick decomposition</a></li>
 <li><a href="#pareto">Pareto</a></li>
+<li><a href="#pareto-1">Pareto</a></li>
 </ul>
 </li>
 <li><a href="#maps">Maps</a></li>
@@ -225,6 +235,65 @@ git add commit -m &lt;MESSAGE&gt;
 </code></pre></div>
 
 <hr />
+<h1 id="bash">Bash</h1>
+<h2 id="starship">Starship</h2>
+<p>Very often we need clarity in the terminal to know the most important information of our current workspace and knowing what username, project, branch, python version you're using at all times becomes paramount.</p>
+<p>For a long time I modified manually the <code>.bashrc</code> file but this was a rather rudimentary way of implementing what <a href="https://starship.rs/">Starhsip</a> does in a split of a second (if you know how to use it).</p>
+<p>Here I'll only display the steps I use for <code>ubuntu</code> but most of the installation steps are clear or easier (with brew --cask) to run on a macOS.</p>
+<p>To <a href="https://starship.rs/guide/#%F0%9F%9A%80-installation">install starship</a> we only need to run:</p>
+<div class="codehilite"><pre><span></span><code>curl -sS https://starship.rs/install.sh <span class="p">|</span> sh
+</code></pre></div>
+
+<p>and then add a single line at the end of <code>~./bashrc</code> (you can open it with <code>gedit ~./bashrc</code>):</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Starship</span>
+<span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>starship init bash<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>To install fonts, I found it easier to follow these steps:</p>
+<ul>
+<li>
+<p>Go to a location where a <code>nerd-fonts</code> repo should be stored
+    <code>bash
+    git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git    # warning: takes a while</code></p>
+</li>
+<li>
+<p>Install a particular font. For instance, for <code>Fira Code NF</code> (which has most of the icons you may need), use:
+    <code>bash
+    cd nerd-fonts/
+    ./install.sh FiraCode</code></p>
+</li>
+</ul>
+<p>Once we have installed it and told bash we want to use it, we now need to configure the main terminal to use this font. </p>
+<p>To do so:</p>
+<ul>
+<li>Open a new terminal (<code>Ctrl+Alt+T</code>)</li>
+<li>In the terminal, go to the preferences/settings. The menu can typically be accessed by clicking on the terminal icon at the top of the window </li>
+<li>Look for the <strong>profile</strong> or appearance settings.</li>
+<li>Tick the checkbox to allow <strong>Custom Font</strong></li>
+<li>Search and choose <code>FiraCode Nerd Font</code></li>
+<li>If you open a new terminal it should make use of the selected font.</li>
+</ul>
+<p>I am a VSCode user, so now to make things work you may need to:</p>
+<ul>
+<li>Go to preferences with <code>Ctrl + ,</code></li>
+<li>Search for <code>Terminal &gt; integrated &gt; Font Family</code></li>
+<li>Insert this as the option: <code>'FiraCode Nerd Font', monospace</code>. This makes use of Fira Code by Nerd Fonts and falls back to monospace if things break down.</li>
+<li>Changes should automatically take place, without restarting vscode</li>
+</ul>
+<p>Now you can choose a template from <a href="https://starship.rs/presets/">this gallery</a>. For example, to install the gruvbox preset, just run</p>
+<div class="codehilite"><pre><span></span><code>starship preset gruvbox-rainbow -o ~/.config/starship.toml
+</code></pre></div>
+
+<p>To check out in detail the steps to install it, or to modify the <code>.toml</code> used to produce the template, simply click on the image.</p>
+<h2 id="read-only-specific-lines-of-a-csv">Read only specific lines of a .csv</h2>
+<p>Sometimes when importing data to pandas or reading from a <code>.csv</code> file one may encounter issues with the imported data.
+To be able to understand the reason behind such an issue you sometimes need to see the data directly to then be able to modify it.
+Here is one command that does such a thing:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;path_to_csv_file.csv&quot;</span>
+cat -n <span class="s2">&quot;</span><span class="nv">$filename</span><span class="s2">&quot;</span> <span class="p">|</span> head -n <span class="m">275211</span> <span class="p">|</span> tail -n <span class="m">3</span>
+</code></pre></div>
+
+<hr />
 <h1 id="python">Python</h1>
 <h2 id="forcing-python-to-reimport-a-library">Forcing python to reimport a library</h2>
 <p>When using jupyter notebooks, IPython optimizes the amount of imports by disregarding those that have been already imported and saved on memory.
@@ -239,6 +308,14 @@ Saving the python file you're working on and rerunning the jupyter cell containi
 </code></pre></div>
 
 <hr />
+<h1 id="pandas">Pandas</h1>
+<h2 id="sql-like-window-functions">SQL-like window functions</h2>
+<p>In SQL, windows can be used when one attempts to gather data from subgroups of a given column for several rows already when defining a column. 
+Pandas is slightly different in that any function stems from the <strong>.groupby</strong> method.
+<a href="https://engineeringfordatascience.com/posts/sql_like_window_functions_in_pandas/">This website</a> explains quite clearly how to make use of SQL-like window functions in pandas.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;n_rows_same_column_value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;column_to_check&#39;</span><span class="p">)[</span><span class="s1">&#39;other_column_to_count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+</code></pre></div>
+
 <hr />
 <h1 id="pyspark">Pyspark</h1>
 <h2 id="time-sliding-windows">Time sliding windows</h2>
@@ -630,6 +707,80 @@ Saving the python file you're working on and rerunning the jupyter cell containi
 </code></pre></div>
 
 <h2 id="pareto">Pareto</h2>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_pareto</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">categorical_column</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value_column</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">threshold_on_value</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Plot Pareto&#39;s curve and compare to the usual 80/20 principle</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df (pd.DataFrame): dataframe with at least a categorical and a value column</span>
+<span class="sd">        categorical_column (str): name of the categorical column to consider.</span>
+<span class="sd">        value_column (str): name of the values column</span>
+<span class="sd">        threshold_on_value (float, optional): cutoff at which categorical entities will be grouped under a unique group.</span>
+<span class="sd">            If None, all elements are shown independently. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        go.Figure: Pareto plot</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;n_elements&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;elem_group&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="n">categorical_column</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">value_column</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">threshold_on_value</span> <span class="k">else</span> <span class="s2">&quot;below_threshold&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;elem_group&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="n">value_column</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;n_elements&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">value_column</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">is_below_thr</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;elem_group&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;below_threshold&quot;</span>
+    <span class="n">df_grouped</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_grouped</span><span class="p">[</span><span class="o">~</span><span class="n">is_below_thr</span><span class="p">],</span> <span class="n">df_grouped</span><span class="p">[</span><span class="n">is_below_thr</span><span class="p">]])</span>
+
+    <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cumulative_pct_val&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">df_grouped</span><span class="p">[</span><span class="n">value_column</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">/</span> <span class="n">df_grouped</span><span class="p">[</span><span class="n">value_column</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cat_order_per_value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;n_elements&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+    <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cum_pct_categories&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cat_order_per_value&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;n_elements&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s2">&quot;secondary_y&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}]])</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cum_pct_categories&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cumulative_pct_val&quot;</span><span class="p">],</span>
+            <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;cumulative % of </span><span class="si">{</span><span class="n">value_column</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines+markers&quot;</span><span class="p">,</span>
+            <span class="n">marker_color</span><span class="o">=</span><span class="s2">&quot;rgba(255,0,0,.5)&quot;</span><span class="p">,</span>
+            <span class="n">customdata</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[[</span><span class="s2">&quot;elem_group&quot;</span><span class="p">,</span> <span class="s2">&quot;n_elements&quot;</span><span class="p">,</span> <span class="n">value_column</span><span class="p">]],</span>
+            <span class="n">hovertemplate</span><span class="o">=</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="p">[</span>
+                    <span class="s2">&quot;&lt;b&gt;%</span><span class="si">{y:0.2f}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Element: &lt;b&gt;%</span><span class="si">{customdata[0]}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Value: &lt;b&gt;%</span><span class="si">{customdata[2]:,}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Cumulative </span><span class="si">% c</span><span class="s2">ategories: &lt;b&gt;%</span><span class="si">{x}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+
+                    <span class="s2">&quot;n_elements: &lt;b&gt;%</span><span class="si">{customdata[1]}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">,</span>
+                <span class="p">]</span>
+            <span class="p">),</span>
+        <span class="p">),</span>
+        <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="s2">&quot;cum_pct_categories&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">df_grouped</span><span class="p">[</span><span class="n">value_column</span><span class="p">],</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">value_column</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;rgba(0,0,255,.5)&quot;</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;rgba(0,0,0,.3)&quot;</span><span class="p">,</span> <span class="n">dash</span><span class="o">=</span><span class="s2">&quot;dash&quot;</span><span class="p">),</span> <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_vline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;rgba(0,0,0,.3)&quot;</span><span class="p">,</span> <span class="n">dash</span><span class="o">=</span><span class="s2">&quot;dash&quot;</span><span class="p">))</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+        <span class="n">hovermode</span><span class="o">=</span><span class="s2">&quot;x unified&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Pareto chart of </span><span class="si">{</span><span class="n">value_column</span><span class="si">}</span><span class="s2"> per </span><span class="si">{</span><span class="n">categorical_column</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1600</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">fig</span>
+</code></pre></div>
+
+<h2 id="pareto_1">Pareto</h2>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">plot_pareto</span><span class="p">(</span>
     <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">categorical_column</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value_column</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">threshold_on_value</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>

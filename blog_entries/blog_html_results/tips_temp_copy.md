@@ -5,8 +5,13 @@
     - [Less important](#less-important)
     - [Take-it-back commands](#take-it-back-commands)
     - [Pre-commit](#pre-commit)
+- [Bash](#bash)
+    - [Starship](#starship)
+    - [Read only specific lines of a .csv](#read-only-specific-lines-of-a-csv)
 - [Python](#python)
     - [Forcing python to reimport a library](#forcing-python-to-reimport-a-library)
+- [Pandas](#pandas)
+    - [SQL-like window functions](#sql-like-window-functions)
 - [Pyspark](#pyspark)
     - [Time sliding windows](#time-sliding-windows)
     - [Flattening nested dataframes](#flattening-nested-dataframes)
@@ -16,6 +21,7 @@
     - [Time Series quick decomposition](#time-series-quick-decomposition)
     - [Time Series quick decomposition](#time-series-quick-decomposition-1)
     - [Pareto](#pareto)
+    - [Pareto](#pareto-1)
 - [Maps](#maps)
 - [Other resources](#other-resources)
 
@@ -130,6 +136,74 @@ git add commit -m <MESSAGE>
 
 ---
 
+# Bash
+## Starship
+Very often we need clarity in the terminal to know the most important information of our current workspace and knowing what username, project, branch, python version you're using at all times becomes paramount.
+
+For a long time I modified manually the `.bashrc` file but this was a rather rudimentary way of implementing what [Starhsip](https://starship.rs/) does in a split of a second (if you know how to use it).
+
+Here I'll only display the steps I use for `ubuntu` but most of the installation steps are clear or easier (with brew --cask) to run on a macOS.
+
+To [install starship](https://starship.rs/guide/#%F0%9F%9A%80-installation) we only need to run:
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+
+and then add a single line at the end of `~./bashrc` (you can open it with `gedit ~./bashrc`):
+```bash
+# Starship
+eval "$(starship init bash)"
+```
+
+To install fonts, I found it easier to follow these steps:
+
+* Go to a location where a `nerd-fonts` repo should be stored
+    ```bash
+    git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git    # warning: takes a while
+    ```
+
+* Install a particular font. For instance, for `Fira Code NF` (which has most of the icons you may need), use:
+    ```bash
+    cd nerd-fonts/
+    ./install.sh FiraCode
+    ```
+
+Once we have installed it and told bash we want to use it, we now need to configure the main terminal to use this font. 
+
+To do so:
+
+* Open a new terminal (`Ctrl+Alt+T`)
+* In the terminal, go to the preferences/settings. The menu can typically be accessed by clicking on the terminal icon at the top of the window 
+* Look for the **profile** or appearance settings.
+* Tick the checkbox to allow **Custom Font**
+* Search and choose `FiraCode Nerd Font`
+* If you open a new terminal it should make use of the selected font.
+
+I am a VSCode user, so now to make things work you may need to:
+
+* Go to preferences with `Ctrl + ,`
+* Search for `Terminal > integrated > Font Family`
+* Insert this as the option: `'FiraCode Nerd Font', monospace`. This makes use of Fira Code by Nerd Fonts and falls back to monospace if things break down.
+* Changes should automatically take place, without restarting vscode
+
+Now you can choose a template from [this gallery](https://starship.rs/presets/). For example, to install the gruvbox preset, just run
+```bash
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+```
+To check out in detail the steps to install it, or to modify the `.toml` used to produce the template, simply click on the image.
+
+
+## Read only specific lines of a .csv
+Sometimes when importing data to pandas or reading from a `.csv` file one may encounter issues with the imported data.
+To be able to understand the reason behind such an issue you sometimes need to see the data directly to then be able to modify it.
+Here is one command that does such a thing:
+```bash
+filename="path_to_csv_file.csv"
+cat -n "$filename" | head -n 275211 | tail -n 3
+```
+
+---
+
 
 # Python
 ## Forcing python to reimport a library
@@ -147,6 +221,17 @@ reload(X)
 ```
 
 ---
+
+# Pandas
+
+## SQL-like window functions
+In SQL, windows can be used when one attempts to gather data from subgroups of a given column for several rows already when defining a column. 
+Pandas is slightly different in that any function stems from the **.groupby** method.
+[This website](https://engineeringfordatascience.com/posts/sql_like_window_functions_in_pandas/) explains quite clearly how to make use of SQL-like window functions in pandas.
+
+```python
+df['n_rows_same_column_value'] = df.groupby('column_to_check')['other_column_to_count'].transform('count')
+```
 
 ---
 
@@ -550,6 +635,81 @@ def plot_time_series_decomposition(
 
     return None
 
+```
+
+## Pareto 
+```python
+def plot_pareto(
+    df: pd.DataFrame, categorical_column: str, value_column: str, threshold_on_value: float = None
+) -> go.Figure:
+    """Plot Pareto's curve and compare to the usual 80/20 principle
+
+    Args:
+        df (pd.DataFrame): dataframe with at least a categorical and a value column
+        categorical_column (str): name of the categorical column to consider.
+        value_column (str): name of the values column
+        threshold_on_value (float, optional): cutoff at which categorical entities will be grouped under a unique group.
+            If None, all elements are shown independently. Defaults to None.
+
+    Returns:
+        go.Figure: Pareto plot
+    """
+
+    df["n_elements"] = 1
+    df["elem_group"] = df.apply(
+        lambda x: x[categorical_column] if x[value_column] > threshold_on_value else "below_threshold", axis=1
+    )
+
+    df_grouped = df.groupby("elem_group").agg({value_column: "sum", "n_elements": "sum"}).reset_index()
+    df_grouped = df_grouped.sort_values(by=value_column, ascending=False)
+
+    is_below_thr = df_grouped["elem_group"] == "below_threshold"
+    df_grouped = pd.concat([df_grouped[~is_below_thr], df_grouped[is_below_thr]])
+
+    df_grouped["cumulative_pct_val"] = 100 * df_grouped[value_column].cumsum() / df_grouped[value_column].sum()
+    df_grouped["cat_order_per_value"] = df_grouped["n_elements"].cumsum()
+    df_grouped["cum_pct_categories"] = 100 * df_grouped["cat_order_per_value"] / df_grouped["n_elements"].sum()
+
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_grouped["cum_pct_categories"],
+            y=df_grouped["cumulative_pct_val"],
+            name=f"cumulative % of {value_column}",
+            mode="lines+markers",
+            marker_color="rgba(255,0,0,.5)",
+            customdata=df_grouped[["elem_group", "n_elements", value_column]],
+            hovertemplate="<br>".join(
+                [
+                    "<b>%{y:0.2f}</b>",
+                    "Element: <b>%{customdata[0]}</b>",
+                    "Value: <b>%{customdata[2]:,}</b>",
+                    "Cumulative % categories: <b>%{x}</b>",
+                    
+                    "n_elements: <b>%{customdata[1]}</b>",
+                ]
+            ),
+        ),
+        secondary_y=True,
+    )
+
+    fig.add_trace(
+        go.Bar(
+            x=df_grouped["cum_pct_categories"],
+            y=df_grouped[value_column],
+            name=value_column,
+            marker=dict(color="rgba(0,0,255,.5)"),
+        )
+    )
+
+    fig.add_hline(y=80, line=dict(color="rgba(0,0,0,.3)", dash="dash"), secondary_y=True)
+    fig.add_vline(x=20, line=dict(color="rgba(0,0,0,.3)", dash="dash"))
+
+    fig.update_layout(
+        hovermode="x unified", title=f"Pareto chart of {value_column} per {categorical_column}", height=600, width=1600
+    )
+    return fig
 ```
 
 ## Pareto 
