@@ -6,6 +6,7 @@
     - [Take-it-back commands](#take-it-back-commands)
     - [Pre-commit](#pre-commit)
 - [Bash](#bash)
+    - [Starship](#starship)
     - [Read only specific lines of a .csv](#read-only-specific-lines-of-a-csv)
 - [Python](#python)
     - [Forcing python to reimport a library](#forcing-python-to-reimport-a-library)
@@ -20,6 +21,7 @@
     - [Time Series quick decomposition](#time-series-quick-decomposition)
     - [Time Series quick decomposition](#time-series-quick-decomposition-1)
     - [Pareto](#pareto)
+    - [Pareto](#pareto-1)
 - [Maps](#maps)
 - [Other resources](#other-resources)
 
@@ -135,6 +137,62 @@ git add commit -m <MESSAGE>
 ---
 
 # Bash
+## Starship
+Very often we need clarity in the terminal to know the most important information of our current workspace and knowing what username, project, branch, python version you're using at all times becomes paramount.
+
+For a long time I modified manually the `.bashrc` file but this was a rather rudimentary way of implementing what [Starhsip](https://starship.rs/) does in a split of a second (if you know how to use it).
+
+Here I'll only display the steps I use for `ubuntu` but most of the installation steps are clear or easier (with brew --cask) to run on a macOS.
+
+To [install starship](https://starship.rs/guide/#%F0%9F%9A%80-installation) we only need to run:
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+
+and then add a single line at the end of `~./bashrc` (you can open it with `gedit ~./bashrc`):
+```bash
+# Starship
+eval "$(starship init bash)"
+```
+
+To install fonts, I found it easier to follow these steps:
+
+* Go to a location where a `nerd-fonts` repo should be stored
+    ```bash
+    git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git    # warning: takes a while
+    ```
+
+* Install a particular font. For instance, for `Fira Code NF` (which has most of the icons you may need), use:
+    ```bash
+    cd nerd-fonts/
+    ./install.sh FiraCode
+    ```
+
+Once we have installed it and told bash we want to use it, we now need to configure the main terminal to use this font. 
+
+To do so:
+
+* Open a new terminal (`Ctrl+Alt+T`)
+* In the terminal, go to the preferences/settings. The menu can typically be accessed by clicking on the terminal icon at the top of the window 
+* Look for the **profile** or appearance settings.
+* Tick the checkbox to allow **Custom Font**
+* Search and choose `FiraCode Nerd Font`
+* If you open a new terminal it should make use of the selected font.
+
+I am a VSCode user, so now to make things work you may need to:
+
+* Go to preferences with `Ctrl + ,`
+* Search for `Terminal > integrated > Font Family`
+* Insert this as the option: `'FiraCode Nerd Font', monospace`. This makes use of Fira Code by Nerd Fonts and falls back to monospace if things break down.
+* Changes should automatically take place, without restarting vscode
+
+Now you can choose a template from [this gallery](https://starship.rs/presets/). For example, to install the gruvbox preset, just run
+```bash
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+```
+To check out in detail the steps to install it, or to modify the `.toml` used to produce the template, simply click on the image.
+
+
 ## Read only specific lines of a .csv
 Sometimes when importing data to pandas or reading from a `.csv` file one may encounter issues with the imported data.
 To be able to understand the reason behind such an issue you sometimes need to see the data directly to then be able to modify it.
