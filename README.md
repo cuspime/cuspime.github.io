@@ -5,4 +5,5 @@ Github repo to host personal website.
 - [ ] distfit analysis for distributions
 - [ ] include two markdown blog posts
 - [ ] improve favicon
+- [ ] include first neo4j blog post
  
