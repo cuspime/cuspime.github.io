@@ -1,0 +1,136 @@
+% -------------------------
+% Resume in Latex
+% Author : Leopoldo Cuspinera
+% OrignalTemplateAuthor : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\usepackage{ragged2e}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\huge
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\ind}{~~~~~}
+
+\renewcommand{\baselinestretch}{1.4}
+
+
+
+%-------------------------------------------
+%%%%%%  Cover Letter variables  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TO}{Hiring Manager}
+\newcommand{\AT}{Blue Health Center}
+\newcommand{\JOBTITLE}{Data Scientist}
+\newcommand{\WHERE}{\href{https://www.linkedin.com/jobs/view/3816390946/?alternateChannel=search&refId=JdmEqCBvtVMhKfXXQGrGKQ\%3D\%3D&trackingId=zmDkJYpy66Sw7blhIcAFVg\%3D\%3D}{Linkedin}}
+
+
+\begin{document}
+
+% ----------HEADING-----------------
+\section{Cover letter}
+~\\
+\Large Dear Hiring Team,
+
+\justify{
+\begin{quote} 
+\large
+
+I am writing to express my interest in the Senior Data Scientist position within the Data Solutions team.
+
+Over the past five years at Camlin, I have evolved from applying analytical techniques to increasingly defining how analytical problems should be solved. My work has focused on transforming complex electricity-network data into scalable analytical capabilities that support operational decision-making for UK Distribution Network Operators. Through graph analytics, forecasting, data engineering and network modelling, I have contributed to products that help customers gain visibility into their networks and derive actionable insights from large-scale datasets.
+
+One of the clearest examples of this progression has been my contribution to the ForeSIGHT programme. While working on the load-allocation capability, I recognised that the original tender proposal was insufficiently specified for large-scale implementation. Rather than implementing the approach directly, I reformulated the problem from first principles and designed a mathematically rigorous methodology based on network topology, flow-conservation principles and measurement reconciliation. The resulting solution was adopted by the customer and became a foundational capability within the project. This experience reinforced my ability to translate ambiguous requirements into scalable, production-oriented analytical solutions.
+A second major area of my contribution has been the development of graph-based network intelligence capabilities. I selected and helped define the Neo4j-based graph architecture underpinning the Network Data Model, enabling physical connectivity analysis across networks containing millions of assets and relationships. I have also developed reusable Python tooling around this platform to support connectivity analysis, network traversal, load tracking and other analytical capabilities. My focus has consistently been on creating reusable foundations that can support multiple products rather than isolated analyses.
+
+Beyond technical implementation, I have increasingly operated as a technical reference point within projects. I have provided onboarding and technical guidance to Data Engineers and Subject Matter Experts, influenced analytical methodologies and data-modelling decisions, and worked closely with customers to understand requirements and shape technical solutions. I enjoy identifying complex problems, understanding their underlying structure and helping teams move towards robust, scalable approaches that create long-term value.
+
+My background combines a PhD in Physics from Durham University with practical experience across graph analytics, machine learning, forecasting, Databricks, Spark and large-scale data engineering and what drives me the most is solving difficult problems and turning complex data into meaningful analytical capabilities that support better decisions. I believe this aligns strongly with the expectations of the Senior Data Scientist role and the impact the Data Solutions team aims to deliver.
+
+I would welcome the opportunity to discuss how my experience and contributions can continue to support the growth of the team and the delivery of analytical solutions for our customers.
+
+\begin{FlushRight}
+Kind regards,\\
+Leopoldo Cuspinera.
+\end{FlushRight}
+
+
+\end{quote}
+}
+% 
+
+
+% 
+
+%-------------------------------------------
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
